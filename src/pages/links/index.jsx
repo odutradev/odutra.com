@@ -33,7 +33,7 @@ function LinksPage() {
       links: [
         {
           title: "Email",
-          url: "mailto:joao.vitornl@gmail.com?subject=Ola tudo bem ? Tenho interesse em seus serviços!",
+          url: "mailto:joao.vitornl@gmail.com?subject=Ol%C3%A1,%20tudo%20bem?%20Tenho%20interesse%20em%20contratar%20seus%20servi%C3%A7os%20para%20desenvolver%20um%20projeto%20digital",
           icon: "email",
           color: "#D14836",
         },
@@ -45,7 +45,7 @@ function LinksPage() {
         },
         {
           title: "WhatsApp",
-          url: "https://api.whatsapp.com/send?phone=+5531997100959&text=ola%20tudo%20bem%20?%20tenho%20interesse%20em%20seus%20serviços!",
+          url: "https://api.whatsapp.com/send?phone=+5531997100959&text=Ol%C3%A1,%20tudo%20bem?%20Tenho%20interesse%20em%20contratar%20seus%20servi%C3%A7os%20para%20desenvolver%20um%20projeto%20digital",
           icon: "whatsapp",
           color: "#25D366",
         },
@@ -55,7 +55,14 @@ function LinksPage() {
           icon: "github",
           color: "#333333",
         },
+        {
+          title: "Instagram",
+          url: "https://instagram.com/odutradev",
+          icon: "instagram",
+          color: "#E1306C",
+        },
       ],
+      
     };
 
     setProfileData(data);
