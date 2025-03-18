@@ -7,6 +7,7 @@ import React from "react";
 
 import config from "./assets/config";
 import Main from "./pages/main";
+import Router from "./routes";
 
 const App = () => {
   const theme = createTheme({
@@ -45,7 +46,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <title>{config?.pageTitle}</title>
       <CssBaseline />
-      <Main />
+      <Router />
     </ThemeProvider>
   );
 };
