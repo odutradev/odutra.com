@@ -1,103 +1,27 @@
-import { Box, Button, Container, Divider, Stack, Typography } from "@mui/material";
-import { Email, LinkedIn, WhatsApp } from "@mui/icons-material";
+import Technologies from './subcomponentes/Technologies'
+import Experience from './subcomponentes/Experience'
+import Education from './subcomponentes/Education'
+import Projects from './subcomponentes/Projects'
+import Contact from './subcomponentes/Contact'
+import Header from './subcomponentes/Header'
+import Footer from './subcomponentes/Footer'
+import Hero from './subcomponentes/Hero'
 
-function Portfolio() {
-  const socialLinks = [
-    {
-      name: "Gmail",
-      icon: <Email />,
-      url: "mailto:joao.vitornl@gmail.com?subject=Ola tudo bem ? Tenho interesse em seus serviços!",
-      color: "#D14836",
-    },
-    {
-      name: "LinkedIn",
-      icon: <LinkedIn />,
-      url: "https://linkedin.com/in/joãovitordutra/",
-      color: "#0077B5",
-    },
-    {
-      name: "WhatsApp",
-      icon: <WhatsApp />,
-      url: "https://api.whatsapp.com/send?phone=+5531997100959&text=ola%20tudo%20bem%20?%20tenho%20interesse%20em%20seus%20serviços!",
-      color: "#25D366",
-    },
-  ];
-
+const MainPage = () => {
   return (
-    <Box
-      sx={{
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        bgcolor: "background.default",
-        p: 3,
-      }}
-    >
-      <Container maxWidth="md">
-        <Box textAlign="center" sx={{ mb: 6 }}>
-          <Typography
-            variant="h2"
-            component="h1"
-            gutterBottom
-            sx={{
-              fontWeight: "bold",
-              fontSize: { xs: "2.5rem", sm: "3.5rem", md: "4rem" },
-            }}
-          >
-            odutradev
-          </Typography>
-
-          <Typography
-            variant="h5"
-            color="text.secondary"
-            sx={{
-              mb: 4,
-              fontSize: { xs: "1.2rem", sm: "1.5rem" },
-            }}
-          >
-            Transformando ideias em soluções digitais com código e criatividade
-          </Typography>
-
-          <Divider sx={{ my: 4 }} />
-
-          <Stack
-            direction={{ xs: "column", sm: "row" }}
-            spacing={2}
-            justifyContent="center"
-            sx={{ mt: 4 }}
-          >
-            {socialLinks.map((link) => (
-              <Button
-                key={link.name}
-                variant="contained"
-                startIcon={link.icon}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={{
-                  bgcolor: link.color,
-                  "&:hover": {
-                    bgcolor: link.color,
-                    opacity: 0.9,
-                  },
-                  px: 3,
-                  py: 1.5,
-                }}
-              >
-                {link.name}
-              </Button>
-            ))}
-          </Stack>
-
-          <Button variant="outlined" href="/links" sx={{ mt: 4 }}>
-            ver meus Links
-          </Button>
-        </Box>
-      </Container>
-    </Box>
-  );
+    <div className="antialiased min-h-screen flex flex-col bg-background text-on-surface">
+      <Header />
+      <main className="flex-grow pt-16">
+        <Hero />
+        <Technologies />
+        <Projects />
+        <Experience />
+        <Education />
+      </main>
+      <Contact />
+      <Footer />
+    </div>
+  )
 }
 
-export default Portfolio;
+export default MainPage
