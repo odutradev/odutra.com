@@ -22,8 +22,7 @@ const Experience = () => {
             Minha trajetória profissional ao longo dos anos
           </p>
         </div>
-        <div className="relative">
-          <div className="absolute left-[15px] top-10 bottom-0 w-px bg-outline-variant hidden sm:block"></div>
+        <div>
           <div className="mb-12">
             <div className="flex items-center gap-3 mb-8">
               <h3 className="font-label-caps text-label-caps text-green-500 tracking-wider">
@@ -33,7 +32,8 @@ const Experience = () => {
                 {experiences.current.length}
               </span>
             </div>
-            <div className="flex flex-col gap-6">
+            <div className="relative flex flex-col gap-6">
+              <div className="absolute left-[15px] top-6 bottom-6 w-px bg-outline-variant hidden sm:block"></div>
               {experiences.current.map((item) => (
                 <div key={item.company} className="relative w-full">
                   <div className={`absolute left-[11px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full ${item.dotColor} hidden sm:block z-10 shadow-[0_0_0_4px_#0A0A0A]`}></div>
@@ -104,7 +104,8 @@ const Experience = () => {
             </div>
 
             {showPreviousExperiences && (
-              <div className="flex flex-col gap-6">
+              <div className="relative flex flex-col gap-6">
+                <div className="absolute left-[15px] top-6 bottom-6 w-px bg-outline-variant hidden sm:block"></div>
                 {experiences.previous.map((item) => (
                   <div key={item.company} className="relative w-full">
                     <div className={`absolute left-[11px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full ${item.dotColor} hidden sm:block z-10 shadow-[0_0_0_4px_#0A0A0A]`}></div>
