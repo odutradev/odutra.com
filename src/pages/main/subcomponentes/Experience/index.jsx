@@ -3,7 +3,7 @@ import { useState, useCallback } from 'react'
 import portfolioData from '../../../../assets/portfolioData'
 
 const Experience = () => {
-  const [showPreviousExperiences, setShowPreviousExperiences] = useState(true)
+  const [showPreviousExperiences, setShowPreviousExperiences] = useState(false)
 
   const handleTogglePrevious = useCallback(() => {
     setShowPreviousExperiences((previousState) => !previousState)
@@ -72,6 +72,14 @@ const Experience = () => {
                             </span>
                             {item.period}
                           </div>
+                          {item.duration && (
+                            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant font-label-code text-xs text-on-surface-variant">
+                              <span className="material-symbols-outlined text-[14px]">
+                                schedule
+                              </span>
+                              {item.duration}
+                            </div>
+                          )}
                           <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant font-label-code text-xs text-on-surface-variant">
                             <span className="material-symbols-outlined text-[14px]">
                               location_on
@@ -134,6 +142,14 @@ const Experience = () => {
                               </span>
                               {item.period}
                             </div>
+                            {item.duration && (
+                              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant font-label-code text-xs text-on-surface-variant">
+                                <span className="material-symbols-outlined text-[14px]">
+                                  schedule
+                                </span>
+                                {item.duration}
+                              </div>
+                            )}
                             <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant font-label-code text-xs text-on-surface-variant">
                               <span className="material-symbols-outlined text-[14px]">
                                 location_on
