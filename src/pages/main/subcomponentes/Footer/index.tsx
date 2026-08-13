@@ -1,12 +1,9 @@
+import { FaHeart } from 'react-icons/fa'
 import { motion } from 'framer-motion'
-
-import portfolioData from '../../../../assets/data'
 
 import type { FooterProps } from './types'
 
 const Footer = (_props: FooterProps) => {
-  const { personalInfo } = portfolioData
-
   return (
     <motion.footer
       initial={{ opacity: 0 }}
@@ -15,13 +12,10 @@ const Footer = (_props: FooterProps) => {
       transition={{ duration: 0.6 }}
       className="w-full py-8 bg-surface border-t border-outline-variant"
     >
-      <div className="max-w-max-width mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-4">
-        <div className="font-headline-md text-xl font-bold text-on-surface">
-          {personalInfo.brandName}
-        </div>
-        <div className="text-on-surface-variant font-label-caps text-label-caps">
-          {personalInfo.copyright}
-        </div>
+      <div className="max-w-max-width mx-auto px-gutter flex justify-center items-center text-on-surface-variant text-sm">
+        <span className="flex items-center gap-1.5">
+          feito com <FaHeart className="text-red-500 animate-pulse text-xs" /> por <span className="font-semibold text-on-surface">odutradev</span>
+        </span>
       </div>
     </motion.footer>
   )
