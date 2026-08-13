@@ -95,7 +95,10 @@ const Experience = (_props: ExperienceProps) => {
                     transition={{ duration: 0.5, delay: index * 0.15 }}
                     className="relative w-full"
                   >
-                    <div className={`absolute left-[11px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full ${item.dotColor} hidden sm:block z-10 ring-4 ring-slate-900`}></div>
+                    <div className="absolute left-[11px] top-1/2 -translate-y-1/2 hidden sm:flex items-center justify-center z-10">
+                      <span className="absolute inline-flex h-3.5 w-3.5 rounded-full bg-white/60 animate-ping" />
+                      <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-white ring-4 ring-slate-900 shadow-[0_0_10px_rgba(255,255,255,0.9)] animate-pulse" />
+                    </div>
                     <div className="sm:ml-12 flex-grow bg-surface-container rounded-xl p-6 border border-outline-variant hover:border-outline transition-colors">
                       <div className="flex flex-col sm:flex-row gap-6">
                         <CompanyLogo item={item} />
@@ -180,7 +183,10 @@ const Experience = (_props: ExperienceProps) => {
                           transition={{ duration: 0.35, delay: index * 0.1 }}
                           className="relative w-full"
                         >
-                          <div className={`absolute left-[11px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full ${item.dotColor} hidden sm:block z-10 ring-4 ring-slate-900`}></div>
+                          <div className="absolute left-[11px] top-1/2 -translate-y-1/2 hidden sm:flex items-center justify-center z-10">
+                            <span className="absolute inline-flex h-3.5 w-3.5 rounded-full bg-white/60 animate-ping" />
+                            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-white ring-4 ring-slate-900 shadow-[0_0_10px_rgba(255,255,255,0.9)] animate-pulse" />
+                          </div>
                           <div className="sm:ml-12 flex-grow bg-surface-container opacity-80 hover:opacity-100 rounded-xl p-6 border border-outline-variant hover:border-outline transition-all">
                             <div className="flex flex-col sm:flex-row gap-6">
                               <CompanyLogo item={item} />
