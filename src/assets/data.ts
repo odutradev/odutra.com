@@ -31,105 +31,137 @@ const portfolioData: PortfolioData = {
   technologyCategories: [
     {
       id: "frontend",
-      title: "Frontend",
-      count: 16,
+      title: "Frontend & Mobile",
+      count: 20,
       defaultExpanded: true,
       items: [
-        { name: "Chakra UI", code: "CH", bg: "bg-teal-100/10", color: "text-teal-500", icon: "chakra_ui" },
-        { name: "CSS", code: "CS", bg: "bg-blue-100/10", color: "text-blue-500", icon: "css" },
-        { name: "HTML", code: "HT", bg: "bg-orange-100/10", color: "text-orange-500", icon: "html" },
-        { name: "JavaScript", code: "JS", bg: "bg-yellow-100/10", color: "text-yellow-500", icon: "javascript" },
-        { name: "Material UI", code: "MU", bg: "bg-blue-100/10", color: "text-blue-400", icon: "material_ui" },
-        { name: "Next", code: "NX", bg: "bg-slate-100/10", color: "text-slate-300", icon: "next" },
-        { name: "Radix", code: "RA", bg: "bg-purple-100/10", color: "text-purple-500", icon: "radix" },
         { name: "React", code: "RE", bg: "bg-cyan-100/10", color: "text-cyan-500", icon: "react" },
+        { name: "React Native", code: "RN", bg: "bg-cyan-100/10", color: "text-cyan-400", icon: "react_native" },
+        { name: "Next.js", code: "NX", bg: "bg-slate-100/10", color: "text-slate-300", icon: "next" },
+        { name: "TypeScript", code: "TS", bg: "bg-blue-100/10", color: "text-blue-600", icon: "typescript" },
+        { name: "JavaScript", code: "JS", bg: "bg-yellow-100/10", color: "text-yellow-500", icon: "javascript" },
+        { name: "HTML5", code: "HT", bg: "bg-orange-100/10", color: "text-orange-500", icon: "html" },
+        { name: "CSS3", code: "CS", bg: "bg-blue-100/10", color: "text-blue-500", icon: "css" },
+        { name: "Vite", code: "VI", bg: "bg-purple-100/10", color: "text-purple-400", icon: "vite" },
+        { name: "Expo", code: "EX", bg: "bg-slate-100/10", color: "text-slate-200", icon: "expo" },
+        { name: "Redux", code: "RD", bg: "bg-purple-100/10", color: "text-purple-500", icon: "redux" },
         { name: "React Router", code: "RR", bg: "bg-red-100/10", color: "text-red-500", icon: "react_router" },
         { name: "Sass", code: "SA", bg: "bg-pink-100/10", color: "text-pink-500", icon: "sass" },
-        { name: "Shadcn UI", code: "SH", bg: "bg-slate-100/10", color: "text-slate-300", icon: "shadcn_ui" },
-        { name: "Styled Components", code: "SC", bg: "bg-yellow-100/10", color: "text-yellow-400", icon: "styled_components" },
+        { name: "Styled Components", code: "SC", bg: "bg-pink-100/10", color: "text-pink-400", icon: "styled_components" },
         { name: "TailwindCSS", code: "TW", bg: "bg-sky-100/10", color: "text-sky-500", icon: "tailwindcss" },
-        { name: "Tanstack", code: "TS", bg: "bg-orange-100/10", color: "text-orange-400", icon: "tanstack" },
-        { name: "Typescript", code: "TY", bg: "bg-blue-100/10", color: "text-blue-600", icon: "typescript" },
-        { name: "Vite", code: "VI", bg: "bg-purple-100/10", color: "text-purple-400", icon: "vite" }
-      ]
-    },
-    {
-      id: "design",
-      title: "Design",
-      count: 2,
-      defaultExpanded: false,
-      items: [
-        { name: "Figma", code: "FG", bg: "bg-purple-100/10", color: "text-purple-400", icon: "figma" },
-        { name: "UI/UX Design", code: "UI", bg: "bg-pink-100/10", color: "text-pink-400", icon: "ui_ux" }
+        { name: "Bootstrap", code: "BS", bg: "bg-purple-100/10", color: "text-purple-500", icon: "bootstrap" },
+        { name: "Chakra UI", code: "CH", bg: "bg-teal-100/10", color: "text-teal-500", icon: "chakra_ui" },
+        { name: "Material UI", code: "MU", bg: "bg-blue-100/10", color: "text-blue-400", icon: "material_ui" },
+        { name: "Radix UI", code: "RA", bg: "bg-purple-100/10", color: "text-purple-500", icon: "radix" },
+        { name: "Shadcn UI", code: "SH", bg: "bg-slate-100/10", color: "text-slate-300", icon: "shadcn_ui" },
+        { name: "TanStack", code: "TN", bg: "bg-orange-100/10", color: "text-orange-400", icon: "tanstack" }
       ]
     },
     {
       id: "backend",
-      title: "Backend",
-      count: 9,
+      title: "Backend & Linguagens",
+      count: 12,
       defaultExpanded: false,
       items: [
         { name: "Node.js", code: "NO", bg: "bg-green-100/10", color: "text-green-500", icon: "nodejs" },
-        { name: "Express", code: "EX", bg: "bg-slate-100/10", color: "text-slate-300", icon: "express" },
+        { name: "Express.js", code: "EX", bg: "bg-slate-100/10", color: "text-slate-300", icon: "express" },
         { name: "NestJS", code: "NE", bg: "bg-red-100/10", color: "text-red-500", icon: "nestjs" },
         { name: "Python", code: "PY", bg: "bg-blue-100/10", color: "text-blue-400", icon: "python" },
         { name: "FastAPI", code: "FA", bg: "bg-teal-100/10", color: "text-teal-400", icon: "fastapi" },
         { name: "Java", code: "JA", bg: "bg-orange-100/10", color: "text-orange-500", icon: "java" },
         { name: "Spring Boot", code: "SB", bg: "bg-green-100/10", color: "text-green-400", icon: "springboot" },
+        { name: "C++", code: "CP", bg: "bg-blue-100/10", color: "text-blue-500", icon: "cpp" },
         { name: "REST API", code: "RS", bg: "bg-sky-100/10", color: "text-sky-400", icon: "rest_api" },
-        { name: "GraphQL", code: "GQ", bg: "bg-pink-100/10", color: "text-pink-500", icon: "graphql" }
+        { name: "GraphQL", code: "GQ", bg: "bg-pink-100/10", color: "text-pink-500", icon: "graphql" },
+        { name: "JWT", code: "JW", bg: "bg-amber-100/10", color: "text-amber-400", icon: "jwt" },
+        { name: "Stripe", code: "ST", bg: "bg-indigo-100/10", color: "text-indigo-400", icon: "stripe" }
       ]
     },
     {
       id: "database",
-      title: "Banco de Dados",
-      count: 3,
+      title: "Banco de Dados & BaaS",
+      count: 5,
       defaultExpanded: false,
       items: [
         { name: "PostgreSQL", code: "PG", bg: "bg-blue-100/10", color: "text-blue-400", icon: "postgresql" },
         { name: "MongoDB", code: "MG", bg: "bg-green-100/10", color: "text-green-500", icon: "mongodb" },
+        { name: "SQLite", code: "SL", bg: "bg-sky-100/10", color: "text-sky-400", icon: "sqlite" },
+        { name: "Firebase", code: "FB", bg: "bg-amber-100/10", color: "text-amber-500", icon: "firebase" },
         { name: "Redis", code: "RD", bg: "bg-red-100/10", color: "text-red-500", icon: "redis" }
       ]
     },
     {
       id: "infrastructure",
-      title: "Infraestrutura",
-      count: 9,
+      title: "Infraestrutura & Cloud",
+      count: 10,
       defaultExpanded: false,
       items: [
         { name: "Docker", code: "DK", bg: "bg-blue-100/10", color: "text-blue-500", icon: "docker" },
-        { name: "AWS", code: "AW", bg: "bg-amber-100/10", color: "text-amber-500", icon: "aws" },
-        { name: "Nginx", code: "NX", bg: "bg-green-100/10", color: "text-green-500", icon: "nginx" },
-        { name: "CI/CD", code: "CI", bg: "bg-indigo-100/10", color: "text-indigo-400", icon: "cicd" },
-        { name: "Linux", code: "LX", bg: "bg-yellow-100/10", color: "text-yellow-500", icon: "linux" },
+        { name: "Amazon AWS", code: "AW", bg: "bg-amber-100/10", color: "text-amber-500", icon: "aws" },
         { name: "Vercel", code: "VC", bg: "bg-slate-100/10", color: "text-slate-200", icon: "vercel" },
-        { name: "Render", code: "RN", bg: "bg-emerald-100/10", color: "text-emerald-400", icon: "render" },
+        { name: "Heroku", code: "HK", bg: "bg-purple-100/10", color: "text-purple-400", icon: "heroku" },
+        { name: "Glitch", code: "GL", bg: "bg-indigo-100/10", color: "text-indigo-400", icon: "glitch" },
+        { name: "Nginx", code: "NX", bg: "bg-green-100/10", color: "text-green-500", icon: "nginx" },
         { name: "Cloudflare", code: "CF", bg: "bg-orange-100/10", color: "text-orange-400", icon: "cloudflare" },
-        { name: "Kubernetes", code: "K8", bg: "bg-blue-100/10", color: "text-blue-600", icon: "kubernetes" }
+        { name: "Kubernetes", code: "K8", bg: "bg-blue-100/10", color: "text-blue-600", icon: "kubernetes" },
+        { name: "Render", code: "RN", bg: "bg-emerald-100/10", color: "text-emerald-400", icon: "render" },
+        { name: "CI/CD", code: "CI", bg: "bg-indigo-100/10", color: "text-indigo-400", icon: "cicd" }
       ]
     },
     {
-      id: "observability",
-      title: "Observabilidade e Analytics",
-      count: 6,
+      id: "tools",
+      title: "Ferramentas de Desenvolvimento",
+      count: 10,
       defaultExpanded: false,
       items: [
-        { name: "Datadog", code: "DD", bg: "bg-purple-100/10", color: "text-purple-400", icon: "datadog" },
-        { name: "Sentry", code: "ST", bg: "bg-red-100/10", color: "text-red-400", icon: "sentry" },
-        { name: "Grafana", code: "GF", bg: "bg-orange-100/10", color: "text-orange-400", icon: "grafana" },
-        { name: "Prometheus", code: "PR", bg: "bg-red-100/10", color: "text-red-500", icon: "prometheus" },
-        { name: "Google Analytics", code: "GA", bg: "bg-amber-100/10", color: "text-amber-400", icon: "google_analytics" },
-        { name: "Mixpanel", code: "MP", bg: "bg-indigo-100/10", color: "text-indigo-400", icon: "mixpanel" }
+        { name: "VS Code", code: "VS", bg: "bg-blue-100/10", color: "text-blue-500", icon: "vscode" },
+        { name: "Postman", code: "PM", bg: "bg-orange-100/10", color: "text-orange-500", icon: "postman" },
+        { name: "Insomnia", code: "IN", bg: "bg-purple-100/10", color: "text-purple-500", icon: "insomnia" },
+        { name: "Arduino IDE", code: "AR", bg: "bg-teal-100/10", color: "text-teal-400", icon: "arduino" },
+        { name: "Replit", code: "RP", bg: "bg-orange-100/10", color: "text-orange-400", icon: "replit" },
+        { name: "Atom", code: "AT", bg: "bg-green-100/10", color: "text-green-400", icon: "atom" },
+        { name: "NPM", code: "NP", bg: "bg-red-100/10", color: "text-red-500", icon: "npm" },
+        { name: "Yarn", code: "YN", bg: "bg-blue-100/10", color: "text-blue-400", icon: "yarn" },
+        { name: "Notion", code: "NT", bg: "bg-slate-100/10", color: "text-slate-200", icon: "notion" },
+        { name: "MS Office", code: "OF", bg: "bg-orange-100/10", color: "text-orange-500", icon: "office" }
+      ]
+    },
+    {
+      id: "testing",
+      title: "Testes & Qualidade",
+      count: 4,
+      defaultExpanded: false,
+      items: [
+        { name: "Jest", code: "JT", bg: "bg-red-100/10", color: "text-red-500", icon: "jest" },
+        { name: "Selenium", code: "SE", bg: "bg-green-100/10", color: "text-green-500", icon: "selenium" },
+        { name: "ESLint", code: "ES", bg: "bg-indigo-100/10", color: "text-indigo-500", icon: "eslint" },
+        { name: "Babel", code: "BB", bg: "bg-yellow-100/10", color: "text-yellow-400", icon: "babel" }
+      ]
+    },
+    {
+      id: "design",
+      title: "Design, Mídia & Games",
+      count: 5,
+      defaultExpanded: false,
+      items: [
+        { name: "Figma", code: "FG", bg: "bg-purple-100/10", color: "text-purple-400", icon: "figma" },
+        { name: "Canva", code: "CN", bg: "bg-cyan-100/10", color: "text-cyan-400", icon: "canva" },
+        { name: "Photoshop", code: "PS", bg: "bg-blue-100/10", color: "text-blue-500", icon: "photoshop" },
+        { name: "Unreal Engine", code: "UE", bg: "bg-slate-100/10", color: "text-slate-300", icon: "unreal" },
+        { name: "UI/UX Design", code: "UI", bg: "bg-pink-100/10", color: "text-pink-400", icon: "ui_ux" }
       ]
     },
     {
       id: "versionControl",
-      title: "Controle de Versões",
-      count: 2,
+      title: "Controle de Versão & Documentação",
+      count: 5,
       defaultExpanded: false,
       items: [
         { name: "Git", code: "GT", bg: "bg-orange-100/10", color: "text-orange-500", icon: "git" },
-        { name: "GitHub", code: "GH", bg: "bg-slate-100/10", color: "text-slate-300", icon: "github" }
+        { name: "GitHub", code: "GH", bg: "bg-slate-100/10", color: "text-slate-300", icon: "github" },
+        { name: "GitHub Pages", code: "GP", bg: "bg-slate-100/10", color: "text-slate-300", icon: "github_pages" },
+        { name: "GitBook", code: "GB", bg: "bg-blue-100/10", color: "text-blue-400", icon: "gitbook" },
+        { name: "Markdown", code: "MD", bg: "bg-slate-100/10", color: "text-slate-200", icon: "markdown" }
       ]
     }
   ],

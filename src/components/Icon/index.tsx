@@ -1,7 +1,8 @@
-import { SiStyledcomponents, SiGoogleanalytics, SiReactrouter, SiSpringboot, SiTypescript, SiPostgresql, SiKubernetes, SiCloudflare, SiTailwindcss, SiPrometheus, SiJavascript, SiNextdotjs, SiTanstack, SiShadcnui, SiDatadog, SiMongodb, SiRadixui, SiFastapi, SiGrafana, SiMixpanel, SiChakraui, SiExpress, SiGithub, SiPython, SiSentry, SiVercel, SiDocker, SiGraphql, SiLinux, SiNestjs, SiRender, SiFigma, SiNginx, SiReact, SiRedis, SiSass, SiVite, SiHtml5, SiCss, SiGit, SiMui } from 'react-icons/si'
+import { SiStyledcomponents, SiGoogleanalytics, SiReactrouter, SiSpringboot, SiTypescript, SiPostgresql, SiKubernetes, SiCloudflare, SiTailwindcss, SiPrometheus, SiJavascript, SiNextdotjs, SiTanstack, SiShadcnui, SiDatadog, SiMongodb, SiRadixui, SiFastapi, SiGrafana, SiMixpanel, SiChakraui, SiExpress, SiGithub, SiPython, SiSentry, SiVercel, SiDocker, SiGraphql, SiLinux, SiNestjs, SiRender, SiFigma, SiNginx, SiReact, SiRedis, SiSass, SiVite, SiHtml5, SiCss, SiGit, SiMui, SiArduino, SiUnrealengine, SiPostman, SiCanvas, SiNpm, SiYarn, SiJest, SiInsomnia, SiNotion, SiReplit, SiCentos, SiApple, SiUbuntu, SiGlitch, SiSqlite, SiEslint, SiFirebase, SiExpo, SiGitbook, SiGithubpages, SiMarkdown, SiBootstrap, SiBabel, SiJsonwebtokens, SiSelenium, SiStripe, SiCplusplus, SiRedux } from 'react-icons/si'
 import { MdPrecisionManufacturing, MdLocalFireDepartment, MdDesignServices, MdSportsEsports, MdCalendarToday, MdArrowForward, MdExpandLess, MdExpandMore, MdLocationOn, MdDarkMode, MdLightMode, MdLightbulb, MdSmartToy, MdLanguage, MdSchedule, MdBiotech, MdSchool, MdBrush, MdCall, MdMail, MdLoop } from 'react-icons/md'
-import { FaInstagram, FaLinkedin, FaNodeJs, FaJava, FaAws } from 'react-icons/fa'
-import { TbApi } from 'react-icons/tb'
+import { FaInstagram, FaLinkedin, FaNodeJs, FaWindows, FaJava, FaAtom, FaAws } from 'react-icons/fa'
+import { TbApi, TbBrandAdobePhotoshop, TbBrandOffice, TbBrandVscode } from 'react-icons/tb'
+import { BiLogoHeroku } from 'react-icons/bi'
 
 import type { IconProps } from './types'
 
@@ -37,6 +38,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   next: SiNextdotjs,
   radix: SiRadixui,
   react: SiReact,
+  react_native: SiReact,
   react_router: SiReactrouter,
   sass: SiSass,
   shadcn_ui: SiShadcnui,
@@ -75,7 +77,41 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   google_analytics: SiGoogleanalytics,
   mixpanel: SiMixpanel,
   git: SiGit,
-  github: SiGithub
+  github: SiGithub,
+  arduino: SiArduino,
+  unreal: SiUnrealengine,
+  postman: SiPostman,
+  canva: SiCanvas,
+  npm: SiNpm,
+  yarn: SiYarn,
+  jest: SiJest,
+  insomnia: SiInsomnia,
+  notion: SiNotion,
+  replit: SiReplit,
+  vscode: TbBrandVscode,
+  photoshop: TbBrandAdobePhotoshop,
+  atom: FaAtom,
+  office: TbBrandOffice,
+  centos: SiCentos,
+  macos: SiApple,
+  ubuntu: SiUbuntu,
+  windows: FaWindows,
+  heroku: BiLogoHeroku,
+  glitch: SiGlitch,
+  sqlite: SiSqlite,
+  eslint: SiEslint,
+  firebase: SiFirebase,
+  expo: SiExpo,
+  gitbook: SiGitbook,
+  github_pages: SiGithubpages,
+  markdown: SiMarkdown,
+  bootstrap: SiBootstrap,
+  babel: SiBabel,
+  jwt: SiJsonwebtokens,
+  selenium: SiSelenium,
+  stripe: SiStripe,
+  cpp: SiCplusplus,
+  redux: SiRedux
 }
 
 const Icon = ({ name, className }: IconProps) => {
@@ -87,3 +123,4 @@ const Icon = ({ name, className }: IconProps) => {
 }
 
 export default Icon
+
