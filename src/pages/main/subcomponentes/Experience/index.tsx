@@ -4,7 +4,45 @@ import { useCallback, useState } from 'react'
 import portfolioData from '../../../../assets/data'
 import Icon from '../../../../components/Icon'
 
+import type { ExperienceItem } from '../../../../assets/types'
 import type { ExperienceProps } from './types'
+
+interface CompanyLogoProps {
+  item: ExperienceItem
+}
+
+const CompanyLogo = ({ item }: CompanyLogoProps) => {
+  const [hasError, setHasError] = useState<boolean>(false)
+
+  const handleImageError = useCallback(() => {
+    setHasError(true)
+  }, [])
+
+  if (item.logoUrl && !hasError) {
+    return (
+      <div className={`w-16 h-16 rounded-xl ${item.colorBg} flex items-center justify-center shrink-0 p-2 overflow-hidden border border-outline-variant/30`}>
+        <img
+          src={item.logoUrl}
+          alt={item.company}
+          onError={handleImageError}
+          className="w-full h-full object-contain"
+        />
+      </div>
+    )
+  }
+
+  return (
+    <div className={`w-16 h-16 rounded-xl ${item.colorBg} ${item.colorText} flex items-center justify-center shrink-0`}>
+      {item.short ? (
+        <span className="font-headline-md font-bold text-2xl">
+          {item.short}
+        </span>
+      ) : (
+        <Icon name={item.icon || ''} className="w-8 h-8" />
+      )}
+    </div>
+  )
+}
 
 const Experience = (_props: ExperienceProps) => {
   const [showPreviousExperiences, setShowPreviousExperiences] = useState<boolean>(false)
@@ -56,15 +94,7 @@ const Experience = (_props: ExperienceProps) => {
                   <div className={`absolute left-[11px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full ${item.dotColor} hidden sm:block z-10 ring-4 ring-slate-900`}></div>
                   <div className="sm:ml-12 flex-grow bg-surface-container rounded-xl p-6 border border-outline-variant hover:border-outline transition-colors">
                     <div className="flex flex-col sm:flex-row gap-6">
-                      <div className={`w-16 h-16 rounded-xl ${item.colorBg} ${item.colorText} flex items-center justify-center shrink-0`}>
-                        {item.short ? (
-                          <span className="font-headline-md font-bold text-2xl">
-                            {item.short}
-                          </span>
-                        ) : (
-                          <Icon name={item.icon || ''} className="w-8 h-8" />
-                        )}
-                      </div>
+                      <CompanyLogo item={item} />
                       <div className="flex-grow">
                         <div className="flex flex-col sm:flex-row justify-between items-start gap-4 mb-2">
                           <div>
@@ -145,11 +175,7 @@ const Experience = (_props: ExperienceProps) => {
                         <div className={`absolute left-[11px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full ${item.dotColor} hidden sm:block z-10 ring-4 ring-slate-900`}></div>
                         <div className="sm:ml-12 flex-grow bg-surface-container opacity-80 hover:opacity-100 rounded-xl p-6 border border-outline-variant hover:border-outline transition-all">
                           <div className="flex flex-col sm:flex-row gap-6">
-                            <div className={`w-16 h-16 rounded-xl ${item.colorBg} ${item.colorText} flex items-center justify-center shrink-0`}>
-                              <span className="font-headline-md font-bold text-2xl">
-                                {item.short}
-                              </span>
-                            </div>
+                            <CompanyLogo item={item} />
                             <div className="flex-grow">
                               <div className="flex flex-col sm:flex-row justify-between items-start gap-4 mb-2">
                                 <div>

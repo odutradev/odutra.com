@@ -52,6 +52,7 @@ export interface ExperienceItem {
   role: string
   short?: string
   icon?: string
+  logoUrl?: string
   colorBg: string
   colorText: string
   period: string
