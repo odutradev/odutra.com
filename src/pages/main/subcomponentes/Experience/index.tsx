@@ -20,12 +20,12 @@ const CompanyLogo = ({ item }: CompanyLogoProps) => {
 
   if (item.logoUrl && !hasError) {
     return (
-      <div className={`w-16 h-16 rounded-xl ${item.colorBg} flex items-center justify-center shrink-0 p-2 overflow-hidden border border-outline-variant/30`}>
+      <div className="w-16 h-16 rounded-xl flex items-center justify-center shrink-0 overflow-hidden">
         <img
           src={item.logoUrl}
           alt={item.company}
           onError={handleImageError}
-          className="w-full h-full object-contain"
+          className="w-full h-full object-cover"
         />
       </div>
     )
