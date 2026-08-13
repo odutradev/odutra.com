@@ -28,6 +28,7 @@ export interface TechnologyItem {
   code: string
   bg: string
   color: string
+  icon?: string
 }
 
 export interface TechnologyCategory {

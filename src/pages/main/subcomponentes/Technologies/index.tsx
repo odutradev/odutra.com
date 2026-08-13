@@ -53,7 +53,11 @@ const Technologies = (_props: TechnologiesProps) => {
                         className="flex items-center gap-4 p-4 rounded-xl bg-surface-container border border-outline-variant hover:border-primary transition-colors"
                       >
                         <div className={`w-8 h-8 rounded ${techItem.bg} ${techItem.color} flex items-center justify-center font-bold text-xs`}>
-                          {techItem.code}
+                          {techItem.icon ? (
+                            <Icon name={techItem.icon} className="w-5 h-5" />
+                          ) : (
+                            techItem.code
+                          )}
                         </div>
                         <span className="font-body-md text-on-surface font-medium">
                           {techItem.name}

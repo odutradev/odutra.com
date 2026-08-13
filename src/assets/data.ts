@@ -35,22 +35,22 @@ const portfolioData: PortfolioData = {
       count: 16,
       defaultExpanded: true,
       items: [
-        { name: "Chakra UI", code: "CH", bg: "bg-teal-100/10", color: "text-teal-500" },
-        { name: "CSS", code: "CS", bg: "bg-blue-100/10", color: "text-blue-500" },
-        { name: "HTML", code: "HT", bg: "bg-orange-100/10", color: "text-orange-500" },
-        { name: "JavaScript", code: "JS", bg: "bg-yellow-100/10", color: "text-yellow-500" },
-        { name: "Material UI", code: "MU", bg: "bg-blue-100/10", color: "text-blue-400" },
-        { name: "Next", code: "NX", bg: "bg-slate-100/10", color: "text-slate-300" },
-        { name: "Radix", code: "RA", bg: "bg-purple-100/10", color: "text-purple-500" },
-        { name: "React", code: "RE", bg: "bg-cyan-100/10", color: "text-cyan-500" },
-        { name: "React Router", code: "RR", bg: "bg-red-100/10", color: "text-red-500" },
-        { name: "Sass", code: "SA", bg: "bg-pink-100/10", color: "text-pink-500" },
-        { name: "Shadcn UI", code: "SH", bg: "bg-slate-100/10", color: "text-slate-300" },
-        { name: "Styled Components", code: "SC", bg: "bg-yellow-100/10", color: "text-yellow-400" },
-        { name: "TailwindCSS", code: "TW", bg: "bg-sky-100/10", color: "text-sky-500" },
-        { name: "Tanstack", code: "TS", bg: "bg-orange-100/10", color: "text-orange-400" },
-        { name: "Typescript", code: "TY", bg: "bg-blue-100/10", color: "text-blue-600" },
-        { name: "Vite", code: "VI", bg: "bg-purple-100/10", color: "text-purple-400" }
+        { name: "Chakra UI", code: "CH", bg: "bg-teal-100/10", color: "text-teal-500", icon: "chakra_ui" },
+        { name: "CSS", code: "CS", bg: "bg-blue-100/10", color: "text-blue-500", icon: "css" },
+        { name: "HTML", code: "HT", bg: "bg-orange-100/10", color: "text-orange-500", icon: "html" },
+        { name: "JavaScript", code: "JS", bg: "bg-yellow-100/10", color: "text-yellow-500", icon: "javascript" },
+        { name: "Material UI", code: "MU", bg: "bg-blue-100/10", color: "text-blue-400", icon: "material_ui" },
+        { name: "Next", code: "NX", bg: "bg-slate-100/10", color: "text-slate-300", icon: "next" },
+        { name: "Radix", code: "RA", bg: "bg-purple-100/10", color: "text-purple-500", icon: "radix" },
+        { name: "React", code: "RE", bg: "bg-cyan-100/10", color: "text-cyan-500", icon: "react" },
+        { name: "React Router", code: "RR", bg: "bg-red-100/10", color: "text-red-500", icon: "react_router" },
+        { name: "Sass", code: "SA", bg: "bg-pink-100/10", color: "text-pink-500", icon: "sass" },
+        { name: "Shadcn UI", code: "SH", bg: "bg-slate-100/10", color: "text-slate-300", icon: "shadcn_ui" },
+        { name: "Styled Components", code: "SC", bg: "bg-yellow-100/10", color: "text-yellow-400", icon: "styled_components" },
+        { name: "TailwindCSS", code: "TW", bg: "bg-sky-100/10", color: "text-sky-500", icon: "tailwindcss" },
+        { name: "Tanstack", code: "TS", bg: "bg-orange-100/10", color: "text-orange-400", icon: "tanstack" },
+        { name: "Typescript", code: "TY", bg: "bg-blue-100/10", color: "text-blue-600", icon: "typescript" },
+        { name: "Vite", code: "VI", bg: "bg-purple-100/10", color: "text-purple-400", icon: "vite" }
       ]
     },
     {
@@ -59,8 +59,8 @@ const portfolioData: PortfolioData = {
       count: 2,
       defaultExpanded: false,
       items: [
-        { name: "Figma", code: "FG", bg: "bg-purple-100/10", color: "text-purple-400" },
-        { name: "UI/UX Design", code: "UI", bg: "bg-pink-100/10", color: "text-pink-400" }
+        { name: "Figma", code: "FG", bg: "bg-purple-100/10", color: "text-purple-400", icon: "figma" },
+        { name: "UI/UX Design", code: "UI", bg: "bg-pink-100/10", color: "text-pink-400", icon: "ui_ux" }
       ]
     },
     {
@@ -69,15 +69,15 @@ const portfolioData: PortfolioData = {
       count: 9,
       defaultExpanded: false,
       items: [
-        { name: "Node.js", code: "NO", bg: "bg-green-100/10", color: "text-green-500" },
-        { name: "Express", code: "EX", bg: "bg-slate-100/10", color: "text-slate-300" },
-        { name: "NestJS", code: "NE", bg: "bg-red-100/10", color: "text-red-500" },
-        { name: "Python", code: "PY", bg: "bg-blue-100/10", color: "text-blue-400" },
-        { name: "FastAPI", code: "FA", bg: "bg-teal-100/10", color: "text-teal-400" },
-        { name: "Java", code: "JA", bg: "bg-orange-100/10", color: "text-orange-500" },
-        { name: "Spring Boot", code: "SB", bg: "bg-green-100/10", color: "text-green-400" },
-        { name: "REST API", code: "RS", bg: "bg-sky-100/10", color: "text-sky-400" },
-        { name: "GraphQL", code: "GQ", bg: "bg-pink-100/10", color: "text-pink-500" }
+        { name: "Node.js", code: "NO", bg: "bg-green-100/10", color: "text-green-500", icon: "nodejs" },
+        { name: "Express", code: "EX", bg: "bg-slate-100/10", color: "text-slate-300", icon: "express" },
+        { name: "NestJS", code: "NE", bg: "bg-red-100/10", color: "text-red-500", icon: "nestjs" },
+        { name: "Python", code: "PY", bg: "bg-blue-100/10", color: "text-blue-400", icon: "python" },
+        { name: "FastAPI", code: "FA", bg: "bg-teal-100/10", color: "text-teal-400", icon: "fastapi" },
+        { name: "Java", code: "JA", bg: "bg-orange-100/10", color: "text-orange-500", icon: "java" },
+        { name: "Spring Boot", code: "SB", bg: "bg-green-100/10", color: "text-green-400", icon: "springboot" },
+        { name: "REST API", code: "RS", bg: "bg-sky-100/10", color: "text-sky-400", icon: "rest_api" },
+        { name: "GraphQL", code: "GQ", bg: "bg-pink-100/10", color: "text-pink-500", icon: "graphql" }
       ]
     },
     {
@@ -86,9 +86,9 @@ const portfolioData: PortfolioData = {
       count: 3,
       defaultExpanded: false,
       items: [
-        { name: "PostgreSQL", code: "PG", bg: "bg-blue-100/10", color: "text-blue-400" },
-        { name: "MongoDB", code: "MG", bg: "bg-green-100/10", color: "text-green-500" },
-        { name: "Redis", code: "RD", bg: "bg-red-100/10", color: "text-red-500" }
+        { name: "PostgreSQL", code: "PG", bg: "bg-blue-100/10", color: "text-blue-400", icon: "postgresql" },
+        { name: "MongoDB", code: "MG", bg: "bg-green-100/10", color: "text-green-500", icon: "mongodb" },
+        { name: "Redis", code: "RD", bg: "bg-red-100/10", color: "text-red-500", icon: "redis" }
       ]
     },
     {
@@ -97,15 +97,15 @@ const portfolioData: PortfolioData = {
       count: 9,
       defaultExpanded: false,
       items: [
-        { name: "Docker", code: "DK", bg: "bg-blue-100/10", color: "text-blue-500" },
-        { name: "AWS", code: "AW", bg: "bg-amber-100/10", color: "text-amber-500" },
-        { name: "Nginx", code: "NX", bg: "bg-green-100/10", color: "text-green-500" },
-        { name: "CI/CD", code: "CI", bg: "bg-indigo-100/10", color: "text-indigo-400" },
-        { name: "Linux", code: "LX", bg: "bg-yellow-100/10", color: "text-yellow-500" },
-        { name: "Vercel", code: "VC", bg: "bg-slate-100/10", color: "text-slate-200" },
-        { name: "Render", code: "RN", bg: "bg-emerald-100/10", color: "text-emerald-400" },
-        { name: "Cloudflare", code: "CF", bg: "bg-orange-100/10", color: "text-orange-400" },
-        { name: "Kubernetes", code: "K8", bg: "bg-blue-100/10", color: "text-blue-600" }
+        { name: "Docker", code: "DK", bg: "bg-blue-100/10", color: "text-blue-500", icon: "docker" },
+        { name: "AWS", code: "AW", bg: "bg-amber-100/10", color: "text-amber-500", icon: "aws" },
+        { name: "Nginx", code: "NX", bg: "bg-green-100/10", color: "text-green-500", icon: "nginx" },
+        { name: "CI/CD", code: "CI", bg: "bg-indigo-100/10", color: "text-indigo-400", icon: "cicd" },
+        { name: "Linux", code: "LX", bg: "bg-yellow-100/10", color: "text-yellow-500", icon: "linux" },
+        { name: "Vercel", code: "VC", bg: "bg-slate-100/10", color: "text-slate-200", icon: "vercel" },
+        { name: "Render", code: "RN", bg: "bg-emerald-100/10", color: "text-emerald-400", icon: "render" },
+        { name: "Cloudflare", code: "CF", bg: "bg-orange-100/10", color: "text-orange-400", icon: "cloudflare" },
+        { name: "Kubernetes", code: "K8", bg: "bg-blue-100/10", color: "text-blue-600", icon: "kubernetes" }
       ]
     },
     {
@@ -114,12 +114,12 @@ const portfolioData: PortfolioData = {
       count: 6,
       defaultExpanded: false,
       items: [
-        { name: "Datadog", code: "DD", bg: "bg-purple-100/10", color: "text-purple-400" },
-        { name: "Sentry", code: "ST", bg: "bg-red-100/10", color: "text-red-400" },
-        { name: "Grafana", code: "GF", bg: "bg-orange-100/10", color: "text-orange-400" },
-        { name: "Prometheus", code: "PR", bg: "bg-red-100/10", color: "text-red-500" },
-        { name: "Google Analytics", code: "GA", bg: "bg-amber-100/10", color: "text-amber-400" },
-        { name: "Mixpanel", code: "MP", bg: "bg-indigo-100/10", color: "text-indigo-400" }
+        { name: "Datadog", code: "DD", bg: "bg-purple-100/10", color: "text-purple-400", icon: "datadog" },
+        { name: "Sentry", code: "ST", bg: "bg-red-100/10", color: "text-red-400", icon: "sentry" },
+        { name: "Grafana", code: "GF", bg: "bg-orange-100/10", color: "text-orange-400", icon: "grafana" },
+        { name: "Prometheus", code: "PR", bg: "bg-red-100/10", color: "text-red-500", icon: "prometheus" },
+        { name: "Google Analytics", code: "GA", bg: "bg-amber-100/10", color: "text-amber-400", icon: "google_analytics" },
+        { name: "Mixpanel", code: "MP", bg: "bg-indigo-100/10", color: "text-indigo-400", icon: "mixpanel" }
       ]
     },
     {
@@ -128,8 +128,8 @@ const portfolioData: PortfolioData = {
       count: 2,
       defaultExpanded: false,
       items: [
-        { name: "Git", code: "GT", bg: "bg-orange-100/10", color: "text-orange-500" },
-        { name: "GitHub", code: "GH", bg: "bg-slate-100/10", color: "text-slate-300" }
+        { name: "Git", code: "GT", bg: "bg-orange-100/10", color: "text-orange-500", icon: "git" },
+        { name: "GitHub", code: "GH", bg: "bg-slate-100/10", color: "text-slate-300", icon: "github" }
       ]
     }
   ],
