@@ -48,7 +48,7 @@ const Hero = (_props: HeroProps) => {
             onClick={(event) => scrollToSection(event, '#contato')}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-electric-blue text-pure-white rounded-lg font-body-md font-medium hover:bg-inverse-primary transition-colors group shadow-lg shadow-electric-blue/20"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-electric-blue text-on-primary rounded-lg font-body-md font-medium hover:bg-inverse-primary transition-colors group shadow-lg shadow-electric-blue/20"
           >
             Vamos conversar
             <Icon name="arrow_forward" className="w-5 h-5 transition-transform group-hover:translate-x-1" />
