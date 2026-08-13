@@ -10,7 +10,7 @@ const portfolioData: PortfolioData = {
     badge: "Desenvolvedor Full-Stack & CEO",
     name: "João Vitor",
     heroTitle: "Opa, eu sou João Dutra",
-    heroBio: "Desenvolvedor full-stack web e mobile com ampla experiência na criação de sistemas, desde a elaboração e prototipação até o desenvolvimento e entrega. Atualmente, atuo como Desenvolvedor Laboratorista no TJMG e lidero projetos educacionais com a Bonfire Tech.",
+    heroBio: "Desenvolvedor full-stack web e mobile com ampla experiência na criação de sistemas, desde a elaboração e prototipação até o desenvolvimento e entrega. Atualmente, atuo como Desenvolvedor Laboratorista no TJMG e lidero a Lite Technology.",
     avatarUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuAngyl2Chy7Re_lMQoNqgCKIIrybUJ7rSTZz3_GcFi2DYQN3E03smJLWn_u3eBAxivfRF5y7PPuuigCPDQ4FEL4u9FpfCs8U1UY-h4UIwmO2g_WWvIhsp4oaXr9iAKSIu6BeppzKLCOwQBDEVNamZvG7ii3KA49nRILa9xjdUn97ma4ZXXHVx04X751mCpVYyYWTP419s5juqmdiGvQ809KrEdKkgPEfuWdZk71xmlSQFA5TmLhWhwJ",
     contactTitle: "Entre em contato, vamos trabalhar em seu projeto",
     contactBio: "Vamos criar juntos um website com estética forte e mensagem clara. Pronto para converter.",
@@ -202,6 +202,21 @@ const portfolioData: PortfolioData = {
         dotColor: "bg-green-500"
       },
       {
+        company: "Lite Technology LTDA",
+        role: "Fundador e CEO",
+        short: "L",
+        logoUrl: "https://i.imgur.com/8zdFUF0.png",
+        colorBg: "bg-cyan-500/10",
+        colorText: "text-cyan-500",
+        period: "Jun 2024 - Atualmente",
+        startDate: "2024-06-28",
+        location: "Híbrido",
+        badgeColor: "bg-green-500",
+        dotColor: "bg-cyan-500"
+      }
+    ],
+    previous: [
+      {
         company: "Bonfire Tech",
         role: "Fundador e CEO",
         short: "B",
@@ -209,14 +224,12 @@ const portfolioData: PortfolioData = {
         icon: "local_fire_department",
         colorBg: "bg-purple-500/10",
         colorText: "text-purple-500",
-        period: "Abr 2022 - Atualmente",
+        period: "Abr 2022 - Abr 2026",
         startDate: "2022-04-01",
+        endDate: "2026-04-01",
         location: "Híbrido",
-        badgeColor: "bg-green-500",
         dotColor: "bg-purple-500"
-      }
-    ],
-    previous: [
+      },
       {
         company: "Dexpay",
         role: "Desenvolvedor Front-end",
