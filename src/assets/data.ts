@@ -31,18 +31,28 @@ const portfolioData: PortfolioData = {
   ],
   technologyCategories: [
     {
+      id: "languages",
+      title: "Linguagens",
+      count: 6,
+      defaultExpanded: true,
+      items: [
+        { name: "TypeScript", code: "TS", bg: "bg-blue-100/10", color: "text-blue-600", icon: "typescript" },
+        { name: "JavaScript", code: "JS", bg: "bg-yellow-100/10", color: "text-yellow-500", icon: "javascript" },
+        { name: "Python", code: "PY", bg: "bg-blue-100/10", color: "text-blue-400", icon: "python" },
+        { name: "C++", code: "CP", bg: "bg-blue-100/10", color: "text-blue-500", icon: "cpp" },
+        { name: "HTML5", code: "HT", bg: "bg-orange-100/10", color: "text-orange-500", icon: "html" },
+        { name: "CSS3", code: "CS", bg: "bg-blue-100/10", color: "text-blue-500", icon: "css" }
+      ]
+    },
+    {
       id: "frontend",
       title: "Frontend & Mobile",
-      count: 20,
-      defaultExpanded: true,
+      count: 12,
+      defaultExpanded: false,
       items: [
         { name: "React", code: "RE", bg: "bg-cyan-100/10", color: "text-cyan-500", icon: "react" },
         { name: "React Native", code: "RN", bg: "bg-cyan-100/10", color: "text-cyan-400", icon: "react_native" },
         { name: "Next.js", code: "NX", bg: "bg-slate-100/10", color: "text-slate-300", icon: "next" },
-        { name: "TypeScript", code: "TS", bg: "bg-blue-100/10", color: "text-blue-600", icon: "typescript" },
-        { name: "JavaScript", code: "JS", bg: "bg-yellow-100/10", color: "text-yellow-500", icon: "javascript" },
-        { name: "HTML5", code: "HT", bg: "bg-orange-100/10", color: "text-orange-500", icon: "html" },
-        { name: "CSS3", code: "CS", bg: "bg-blue-100/10", color: "text-blue-500", icon: "css" },
         { name: "Vite", code: "VI", bg: "bg-purple-100/10", color: "text-purple-400", icon: "vite" },
         { name: "Expo", code: "EX", bg: "bg-slate-100/10", color: "text-slate-200", icon: "expo" },
         { name: "Redux", code: "RD", bg: "bg-purple-100/10", color: "text-purple-500", icon: "redux" },
@@ -51,29 +61,18 @@ const portfolioData: PortfolioData = {
         { name: "Styled Components", code: "SC", bg: "bg-pink-100/10", color: "text-pink-400", icon: "styled_components" },
         { name: "TailwindCSS", code: "TW", bg: "bg-sky-100/10", color: "text-sky-500", icon: "tailwindcss" },
         { name: "Bootstrap", code: "BS", bg: "bg-purple-100/10", color: "text-purple-500", icon: "bootstrap" },
-        { name: "Chakra UI", code: "CH", bg: "bg-teal-100/10", color: "text-teal-500", icon: "chakra_ui" },
-        { name: "Material UI", code: "MU", bg: "bg-blue-100/10", color: "text-blue-400", icon: "material_ui" },
-        { name: "Radix UI", code: "RA", bg: "bg-purple-100/10", color: "text-purple-500", icon: "radix" },
-        { name: "Shadcn UI", code: "SH", bg: "bg-slate-100/10", color: "text-slate-300", icon: "shadcn_ui" },
-        { name: "TanStack", code: "TN", bg: "bg-orange-100/10", color: "text-orange-400", icon: "tanstack" }
+        { name: "Material UI", code: "MU", bg: "bg-blue-100/10", color: "text-blue-400", icon: "material_ui" }
       ]
     },
     {
       id: "backend",
-      title: "Backend & Linguagens",
-      count: 12,
+      title: "Backend",
+      count: 5,
       defaultExpanded: false,
       items: [
         { name: "Node.js", code: "NO", bg: "bg-green-100/10", color: "text-green-500", icon: "nodejs" },
         { name: "Express.js", code: "EX", bg: "bg-slate-100/10", color: "text-slate-300", icon: "express" },
-        { name: "NestJS", code: "NE", bg: "bg-red-100/10", color: "text-red-500", icon: "nestjs" },
-        { name: "Python", code: "PY", bg: "bg-blue-100/10", color: "text-blue-400", icon: "python" },
-        { name: "FastAPI", code: "FA", bg: "bg-teal-100/10", color: "text-teal-400", icon: "fastapi" },
-        { name: "Java", code: "JA", bg: "bg-orange-100/10", color: "text-orange-500", icon: "java" },
-        { name: "Spring Boot", code: "SB", bg: "bg-green-100/10", color: "text-green-400", icon: "springboot" },
-        { name: "C++", code: "CP", bg: "bg-blue-100/10", color: "text-blue-500", icon: "cpp" },
         { name: "REST API", code: "RS", bg: "bg-sky-100/10", color: "text-sky-400", icon: "rest_api" },
-        { name: "GraphQL", code: "GQ", bg: "bg-pink-100/10", color: "text-pink-500", icon: "graphql" },
         { name: "JWT", code: "JW", bg: "bg-amber-100/10", color: "text-amber-400", icon: "jwt" },
         { name: "Stripe", code: "ST", bg: "bg-indigo-100/10", color: "text-indigo-400", icon: "stripe" }
       ]
@@ -81,30 +80,26 @@ const portfolioData: PortfolioData = {
     {
       id: "database",
       title: "Banco de Dados & BaaS",
-      count: 5,
+      count: 4,
       defaultExpanded: false,
       items: [
         { name: "PostgreSQL", code: "PG", bg: "bg-blue-100/10", color: "text-blue-400", icon: "postgresql" },
         { name: "MongoDB", code: "MG", bg: "bg-green-100/10", color: "text-green-500", icon: "mongodb" },
         { name: "SQLite", code: "SL", bg: "bg-sky-100/10", color: "text-sky-400", icon: "sqlite" },
-        { name: "Firebase", code: "FB", bg: "bg-amber-100/10", color: "text-amber-500", icon: "firebase" },
-        { name: "Redis", code: "RD", bg: "bg-red-100/10", color: "text-red-500", icon: "redis" }
+        { name: "Firebase", code: "FB", bg: "bg-amber-100/10", color: "text-amber-500", icon: "firebase" }
       ]
     },
     {
       id: "infrastructure",
       title: "Infraestrutura & Cloud",
-      count: 10,
+      count: 7,
       defaultExpanded: false,
       items: [
         { name: "Docker", code: "DK", bg: "bg-blue-100/10", color: "text-blue-500", icon: "docker" },
-        { name: "Amazon AWS", code: "AW", bg: "bg-amber-100/10", color: "text-amber-500", icon: "aws" },
         { name: "Vercel", code: "VC", bg: "bg-slate-100/10", color: "text-slate-200", icon: "vercel" },
         { name: "Heroku", code: "HK", bg: "bg-purple-100/10", color: "text-purple-400", icon: "heroku" },
         { name: "Glitch", code: "GL", bg: "bg-indigo-100/10", color: "text-indigo-400", icon: "glitch" },
         { name: "Nginx", code: "NX", bg: "bg-green-100/10", color: "text-green-500", icon: "nginx" },
-        { name: "Cloudflare", code: "CF", bg: "bg-orange-100/10", color: "text-orange-400", icon: "cloudflare" },
-        { name: "Kubernetes", code: "K8", bg: "bg-blue-100/10", color: "text-blue-600", icon: "kubernetes" },
         { name: "Render", code: "RN", bg: "bg-emerald-100/10", color: "text-emerald-400", icon: "render" },
         { name: "CI/CD", code: "CI", bg: "bg-indigo-100/10", color: "text-indigo-400", icon: "cicd" }
       ]
@@ -112,7 +107,7 @@ const portfolioData: PortfolioData = {
     {
       id: "tools",
       title: "Ferramentas de Desenvolvimento",
-      count: 10,
+      count: 8,
       defaultExpanded: false,
       items: [
         { name: "VS Code", code: "VS", bg: "bg-blue-100/10", color: "text-blue-500", icon: "vscode" },
@@ -120,23 +115,9 @@ const portfolioData: PortfolioData = {
         { name: "Insomnia", code: "IN", bg: "bg-purple-100/10", color: "text-purple-500", icon: "insomnia" },
         { name: "Arduino IDE", code: "AR", bg: "bg-teal-100/10", color: "text-teal-400", icon: "arduino" },
         { name: "Replit", code: "RP", bg: "bg-orange-100/10", color: "text-orange-400", icon: "replit" },
-        { name: "Atom", code: "AT", bg: "bg-green-100/10", color: "text-green-400", icon: "atom" },
         { name: "NPM", code: "NP", bg: "bg-red-100/10", color: "text-red-500", icon: "npm" },
         { name: "Yarn", code: "YN", bg: "bg-blue-100/10", color: "text-blue-400", icon: "yarn" },
-        { name: "Notion", code: "NT", bg: "bg-slate-100/10", color: "text-slate-200", icon: "notion" },
-        { name: "MS Office", code: "OF", bg: "bg-orange-100/10", color: "text-orange-500", icon: "office" }
-      ]
-    },
-    {
-      id: "testing",
-      title: "Testes & Qualidade",
-      count: 4,
-      defaultExpanded: false,
-      items: [
-        { name: "Jest", code: "JT", bg: "bg-red-100/10", color: "text-red-500", icon: "jest" },
-        { name: "Selenium", code: "SE", bg: "bg-green-100/10", color: "text-green-500", icon: "selenium" },
-        { name: "ESLint", code: "ES", bg: "bg-indigo-100/10", color: "text-indigo-500", icon: "eslint" },
-        { name: "Babel", code: "BB", bg: "bg-yellow-100/10", color: "text-yellow-400", icon: "babel" }
+        { name: "Notion", code: "NT", bg: "bg-slate-100/10", color: "text-slate-200", icon: "notion" }
       ]
     },
     {

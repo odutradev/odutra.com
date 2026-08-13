@@ -7,7 +7,7 @@ import Icon from '../../../../components/Icon'
 import type { TechnologiesProps } from './types'
 
 const Technologies = (_props: TechnologiesProps) => {
-  const [expandedCategory, setExpandedCategory] = useState<string | null>('frontend')
+  const [expandedCategory, setExpandedCategory] = useState<string | null>('languages')
 
   const handleToggleCategory = useCallback((categoryId: string) => {
     setExpandedCategory((previousCategory) => (
@@ -44,7 +44,7 @@ const Technologies = (_props: TechnologiesProps) => {
                       {category.title}
                     </span>
                     <span className="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant text-sm font-medium">
-                      {category.count}
+                      {category.items.length}
                     </span>
                   </div>
                   <motion.div
