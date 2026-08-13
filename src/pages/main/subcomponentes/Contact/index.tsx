@@ -1,6 +1,8 @@
 import portfolioData from '../../../../assets/data'
 
-const Contact = () => {
+import type { ContactProps } from './types'
+
+const Contact = (_props: ContactProps) => {
   const { personalInfo, socialLinks } = portfolioData
 
   return (

@@ -1,8 +1,10 @@
 import { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react'
 
-const ThemeContext = createContext()
+import type { CustomThemeProviderProps, ThemeContextType, Theme } from './types'
 
-const getInitialTheme = () => {
+const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
+
+const getInitialTheme = (): Theme => {
   const savedTheme = localStorage.getItem('theme')
   if (savedTheme === 'dark' || savedTheme === 'light') {
     return savedTheme
@@ -10,8 +12,8 @@ const getInitialTheme = () => {
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 }
 
-export const CustomThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(getInitialTheme)
+export const CustomThemeProvider = ({ children }: CustomThemeProviderProps) => {
+  const [theme, setTheme] = useState<Theme>(getInitialTheme)
 
   useEffect(() => {
     const root = document.documentElement
@@ -24,7 +26,7 @@ export const CustomThemeProvider = ({ children }) => {
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-    const handleChange = (event) => {
+    const handleChange = (event: MediaQueryListEvent) => {
       if (!localStorage.getItem('theme')) {
         setTheme(event.matches ? 'dark' : 'light')
       }
@@ -35,13 +37,13 @@ export const CustomThemeProvider = ({ children }) => {
 
   const toggleTheme = useCallback(() => {
     setTheme((previousTheme) => {
-      const nextTheme = previousTheme === 'dark' ? 'light' : 'dark'
+      const nextTheme: Theme = previousTheme === 'dark' ? 'light' : 'dark'
       localStorage.setItem('theme', nextTheme)
       return nextTheme
     })
   }, [])
 
-  const contextValue = useMemo(() => ({
+  const contextValue = useMemo<ThemeContextType>(() => ({
     theme,
     isDarkMode: theme === 'dark',
     toggleTheme
@@ -54,7 +56,7 @@ export const CustomThemeProvider = ({ children }) => {
   )
 }
 
-export const useTheme = () => {
+export const useTheme = (): ThemeContextType => {
   const context = useContext(ThemeContext)
   if (!context) {
     throw new Error('useTheme must be used within CustomThemeProvider')

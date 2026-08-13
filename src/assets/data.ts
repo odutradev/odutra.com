@@ -1,8 +1,10 @@
-const config = {
+import type { PortfolioData, Config } from './types'
+
+const config: Config = {
   pageTitle: "ODUTRADEV"
 }
 
-const portfolioData = {
+const portfolioData: PortfolioData = {
   personalInfo: {
     brandName: "odutradev",
     badge: "Desenvolvedor Full-Stack & CEO",

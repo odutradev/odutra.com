@@ -2,10 +2,12 @@ import { useState, useCallback } from 'react'
 
 import portfolioData from '../../../../assets/data'
 
-const Technologies = () => {
-  const [expandedCategory, setExpandedCategory] = useState('frontend')
+import type { TechnologiesProps } from './types'
 
-  const handleToggleCategory = useCallback((categoryId) => {
+const Technologies = (_props: TechnologiesProps) => {
+  const [expandedCategory, setExpandedCategory] = useState<string | null>('frontend')
+
+  const handleToggleCategory = useCallback((categoryId: string) => {
     setExpandedCategory((previousCategory) => (
       previousCategory === categoryId
         ? null
@@ -71,4 +73,3 @@ const Technologies = () => {
 }
 
 export default Technologies
-

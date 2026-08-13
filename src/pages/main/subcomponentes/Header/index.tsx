@@ -1,7 +1,9 @@
 import { useTheme } from '../../../../context/ThemeContext'
 import portfolioData from '../../../../assets/data'
 
-const Header = () => {
+import type { HeaderProps } from './types'
+
+const Header = (_props: HeaderProps) => {
   const { isDarkMode, toggleTheme } = useTheme()
 
   const { personalInfo, navLinks } = portfolioData

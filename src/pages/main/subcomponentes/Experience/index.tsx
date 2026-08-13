@@ -2,8 +2,10 @@ import { useState, useCallback } from 'react'
 
 import portfolioData from '../../../../assets/data'
 
-const Experience = () => {
-  const [showPreviousExperiences, setShowPreviousExperiences] = useState(false)
+import type { ExperienceProps } from './types'
+
+const Experience = (_props: ExperienceProps) => {
+  const [showPreviousExperiences, setShowPreviousExperiences] = useState<boolean>(false)
 
   const handleTogglePrevious = useCallback(() => {
     setShowPreviousExperiences((previousState) => !previousState)

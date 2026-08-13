@@ -1,6 +1,8 @@
 import portfolioData from '../../../../assets/data'
 
-const Footer = () => {
+import type { FooterProps } from './types'
+
+const Footer = (_props: FooterProps) => {
   const { personalInfo } = portfolioData
 
   return (

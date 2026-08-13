@@ -1,6 +1,8 @@
 import portfolioData from '../../../../assets/data'
 
-const Hero = () => {
+import type { HeroProps } from './types'
+
+const Hero = (_props: HeroProps) => {
   const { personalInfo } = portfolioData
 
   return (
