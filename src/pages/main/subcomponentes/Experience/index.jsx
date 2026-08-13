@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 
-import portfolioData from '../../../../assets/portfolioData'
+import portfolioData from '../../../../assets/data'
 
 const Experience = () => {
   const [showPreviousExperiences, setShowPreviousExperiences] = useState(false)

@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 
-import portfolioData from '../../../../assets/portfolioData'
+import portfolioData from '../../../../assets/data'
 
 const Technologies = () => {
   const [expandedCategory, setExpandedCategory] = useState('frontend')

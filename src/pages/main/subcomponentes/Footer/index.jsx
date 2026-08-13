@@ -1,4 +1,4 @@
-import portfolioData from '../../../../assets/portfolioData'
+import portfolioData from '../../../../assets/data'
 
 const Footer = () => {
   const { personalInfo } = portfolioData

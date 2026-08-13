@@ -1,7 +1,9 @@
-import { useState, useEffect } from "react";
-import { Avatar, Box, Card, Container, Link, Stack, Typography } from "@mui/material";
-import { Email, LinkedIn, WhatsApp, GitHub, Instagram, Twitter, YouTube, Language, Code } from "@mui/icons-material";
-import icon from "./icon.jpg";
+import { useState, useEffect } from 'react'
+import { Email, LinkedIn, WhatsApp, GitHub, Instagram, Twitter, YouTube, Language, Code } from '@mui/icons-material'
+import { Avatar, Box, Card, Container, Link, Stack, Typography } from '@mui/material'
+
+import { linksPageData } from '../../assets/data'
+import icon from './icon.jpg'
 
 const iconMap = {
   email: <Email />,
@@ -12,57 +14,23 @@ const iconMap = {
   twitter: <Twitter />,
   youtube: <YouTube />,
   website: <Language />,
-  code: <Code />,
-};
+  code: <Code />
+}
 
 function LinksPage() {
   const [profileData, setProfileData] = useState({
     name: "odutradev",
     tagline: "Carregando...",
     avatar: null,
-    links: [],
-  });
+    links: []
+  })
 
   useEffect(() => {
-    const data = {
-      name: "odutradev",
-      tagline: "Transformando ideias em soluções digitais com código e criatividade",
-      avatar: icon,
-      links: [
-        {
-          title: "Email",
-          url: "mailto:joao.vitornl@gmail.com?subject=Ol%C3%A1,%20tudo%20bem?%20Tenho%20interesse%20em%20contratar%20seus%20servi%C3%A7os%20para%20desenvolver%20um%20projeto%20digital",
-          icon: "email",
-          color: "#D14836",
-        },
-        {
-          title: "LinkedIn",
-          url: "https://linkedin.com/in/joãovitordutra/",
-          icon: "linkedin",
-          color: "#0077B5",
-        },
-        {
-          title: "WhatsApp",
-          url: "https://api.whatsapp.com/send?phone=+5531997100959&text=Ol%C3%A1,%20tudo%20bem?%20Tenho%20interesse%20em%20contratar%20seus%20servi%C3%A7os%20para%20desenvolver%20um%20projeto%20digital",
-          icon: "whatsapp",
-          color: "#25D366",
-        },
-        {
-          title: "GitHub",
-          url: "https://github.com/odutradev",
-          icon: "github",
-          color: "#333333",
-        },
-        {
-          title: "Instagram",
-          url: "https://instagram.com/odutradev",
-          icon: "instagram",
-          color: "#E1306C",
-        },
-      ],
-    };
-    setProfileData(data);
-  }, []);
+    setProfileData({
+      ...linksPageData,
+      avatar: icon
+    })
+  }, [])
 
   return (
     <Box sx={{ minHeight: "100vh", display: "flex", flexDirection: "column", bgcolor: "background.default", py: 4, px: 2 }}>
@@ -90,11 +58,11 @@ function LinksPage() {
         </Box>
       </Container>
     </Box>
-  );
+  )
 }
 
 function LinkCard({ link }) {
-  const iconComponent = link.icon && iconMap[link.icon.toLowerCase()] ? iconMap[link.icon.toLowerCase()] : <Language />;
+  const iconComponent = link.icon && iconMap[link.icon.toLowerCase()] ? iconMap[link.icon.toLowerCase()] : <Language />
   return (
     <Link href={link.url} target="_blank" rel="noopener noreferrer" underline="none">
       <Card sx={{ p: 2, display: "flex", alignItems: "center", bgcolor: link.color || "primary.main", color: "white", borderRadius: 2, transition: "transform 0.2s, box-shadow 0.2s", boxShadow: 2, "&:hover": { transform: "translateY(-3px)", boxShadow: 4 } }}>
@@ -104,7 +72,7 @@ function LinkCard({ link }) {
         </Typography>
       </Card>
     </Link>
-  );
+  )
 }
 
-export default LinksPage;
+export default LinksPage

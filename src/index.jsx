@@ -1,10 +1,8 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles'
-import { ToastContainer, Bounce } from 'react-toastify'
 import CssBaseline from '@mui/material/CssBaseline'
 import ReactDOM from 'react-dom/client'
 
-import portfolioData from './assets/portfolioData'
-import config from './assets/config'
+import { portfolioData, config } from './assets/data'
 import Router from './routes'
 
 const theme = createTheme({
@@ -49,21 +47,4 @@ const App = () => {
   )
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <>
-    <ToastContainer
-      position="top-right"
-      autoClose={5000}
-      hideProgressBar={false}
-      newestOnTop={false}
-      closeOnClick={false}
-      rtl={false}
-      pauseOnFocusLoss
-      draggable
-      pauseOnHover
-      transition={Bounce}
-      theme="dark"
-    />
-    <App />
-  </>
-)
+ReactDOM.createRoot(document.getElementById('root')).render(<App />)

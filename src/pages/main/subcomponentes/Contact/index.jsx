@@ -1,4 +1,4 @@
-import portfolioData from '../../../../assets/portfolioData'
+import portfolioData from '../../../../assets/data'
 
 const Contact = () => {
   const { personalInfo, socialLinks } = portfolioData

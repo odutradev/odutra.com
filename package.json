@@ -13,14 +13,12 @@
   "license": "ISC",
   "dependencies": {
     "@emotion/react": "^11.14.0",
-    "@emotion/style": "^0.8.0",
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.4.8",
     "@mui/material": "^6.4.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.30.0",
-    "react-toastify": "^11.0.5"
+    "react-router-dom": "^6.30.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^2.2.0",
