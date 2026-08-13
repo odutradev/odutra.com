@@ -52,7 +52,7 @@ const portfolioData = {
     brandName: "odutradev",
     badge: "Desenvolvedor Full-Stack & CEO",
     name: "João Vitor",
-    heroTitle: "Opa, eu sou João Vitor",
+    heroTitle: "Opa, eu sou João Dutra",
     heroBio: "Desenvolvedor full-stack web e mobile com ampla experiência na criação de sistemas, desde a elaboração e prototipação até o desenvolvimento e entrega. Atualmente, atuo como Desenvolvedor Laboratorista no TJMG e lidero projetos educacionais com a Bonfire Tech.",
     avatarUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuAngyl2Chy7Re_lMQoNqgCKIIrybUJ7rSTZz3_GcFi2DYQN3E03smJLWn_u3eBAxivfRF5y7PPuuigCPDQ4FEL4u9FpfCs8U1UY-h4UIwmO2g_WWvIhsp4oaXr9iAKSIu6BeppzKLCOwQBDEVNamZvG7ii3KA49nRILa9xjdUn97ma4ZXXHVx04X751mCpVYyYWTP419s5juqmdiGvQ809KrEdKkgPEfuWdZk71xmlSQFA5TmLhWhwJ",
     contactTitle: "Entre em contato, vamos trabalhar em seu projeto",
