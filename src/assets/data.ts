@@ -196,8 +196,8 @@ const portfolioData: PortfolioData = {
         colorBg: "bg-red-500/10",
         colorText: "text-red-500",
         period: "Nov 2024 - Atualmente",
-        duration: "1 mês",
-        location: "Belo Horizonte, MG",
+        startDate: "2024-11-01",
+        location: "Híbrido",
         badgeColor: "bg-green-500",
         dotColor: "bg-green-500"
       },
@@ -210,7 +210,7 @@ const portfolioData: PortfolioData = {
         colorBg: "bg-purple-500/10",
         colorText: "text-purple-500",
         period: "Abr 2022 - Atualmente",
-        duration: "2 anos e 8 meses",
+        startDate: "2022-04-01",
         location: "Híbrido",
         badgeColor: "bg-green-500",
         dotColor: "bg-purple-500"
@@ -225,7 +225,8 @@ const portfolioData: PortfolioData = {
         colorBg: "bg-blue-500/10",
         colorText: "text-blue-500",
         period: "Jun 2024 - Nov 2024",
-        duration: "5 meses",
+        startDate: "2024-06-01",
+        endDate: "2024-11-01",
         location: "Híbrido",
         dotColor: "bg-blue-500"
       },
@@ -237,7 +238,8 @@ const portfolioData: PortfolioData = {
         colorBg: "bg-orange-500/10",
         colorText: "text-orange-500",
         period: "Nov 2021 - Jun 2024",
-        duration: "2 anos e 7 meses",
+        startDate: "2021-11-01",
+        endDate: "2024-06-01",
         location: "Remoto",
         dotColor: "bg-orange-500"
       },
@@ -248,7 +250,8 @@ const portfolioData: PortfolioData = {
         colorBg: "bg-teal-500/10",
         colorText: "text-teal-500",
         period: "Jun 2021 - Nov 2021",
-        duration: "5 meses",
+        startDate: "2021-06-01",
+        endDate: "2021-11-01",
         location: "Remoto",
         dotColor: "bg-teal-500"
       }

@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useCallback, useState } from 'react'
 
+import { calculateDuration } from '../../../../utils/date'
 import portfolioData from '../../../../assets/data'
 import Icon from '../../../../components/Icon'
 
@@ -82,55 +83,59 @@ const Experience = (_props: ExperienceProps) => {
             </div>
             <div className="relative flex flex-col gap-6">
               <div className="absolute left-[15px] top-6 bottom-6 w-px bg-outline-variant hidden sm:block"></div>
-              {experiences.current.map((item, index) => (
-                <motion.div
-                  key={item.company}
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.15 }}
-                  className="relative w-full"
-                >
-                  <div className={`absolute left-[11px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full ${item.dotColor} hidden sm:block z-10 ring-4 ring-slate-900`}></div>
-                  <div className="sm:ml-12 flex-grow bg-surface-container rounded-xl p-6 border border-outline-variant hover:border-outline transition-colors">
-                    <div className="flex flex-col sm:flex-row gap-6">
-                      <CompanyLogo item={item} />
-                      <div className="flex-grow">
-                        <div className="flex flex-col sm:flex-row justify-between items-start gap-4 mb-2">
-                          <div>
-                            <h4 className="font-headline-md text-xl font-bold text-on-surface mb-1">
-                              {item.role}
-                            </h4>
-                            <p className="font-body-md text-on-surface-variant">
-                              {item.company}
-                            </p>
-                          </div>
-                          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-500/10 text-green-500 border border-green-500/20 font-label-caps text-[10px]">
-                            <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-ping"></span>
-                            ATUAL
-                          </span>
-                        </div>
-                        <div className="flex flex-wrap gap-3 mt-4 mb-4">
-                          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant font-label-code text-xs text-on-surface-variant">
-                            <Icon name="calendar_today" className="w-3.5 h-3.5" />
-                            {item.period}
-                          </div>
-                          {item.duration && (
-                            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant font-label-code text-xs text-on-surface-variant">
-                              <Icon name="schedule" className="w-3.5 h-3.5" />
-                              {item.duration}
+              {experiences.current.map((item, index) => {
+                const durationText = item.startDate ? calculateDuration(item.startDate, item.endDate) : item.duration
+
+                return (
+                  <motion.div
+                    key={item.company}
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.15 }}
+                    className="relative w-full"
+                  >
+                    <div className={`absolute left-[11px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full ${item.dotColor} hidden sm:block z-10 ring-4 ring-slate-900`}></div>
+                    <div className="sm:ml-12 flex-grow bg-surface-container rounded-xl p-6 border border-outline-variant hover:border-outline transition-colors">
+                      <div className="flex flex-col sm:flex-row gap-6">
+                        <CompanyLogo item={item} />
+                        <div className="flex-grow">
+                          <div className="flex flex-col sm:flex-row justify-between items-start gap-4 mb-2">
+                            <div>
+                              <h4 className="font-headline-md text-xl font-bold text-on-surface mb-1">
+                                {item.role}
+                              </h4>
+                              <p className="font-body-md text-on-surface-variant">
+                                {item.company}
+                              </p>
                             </div>
-                          )}
-                          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant font-label-code text-xs text-on-surface-variant">
-                            <Icon name="location_on" className="w-3.5 h-3.5" />
-                            {item.location}
+                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-500/10 text-green-500 border border-green-500/20 font-label-caps text-[10px]">
+                              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-ping"></span>
+                              ATUAL
+                            </span>
+                          </div>
+                          <div className="flex flex-wrap gap-3 mt-4 mb-4">
+                            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant font-label-code text-xs text-on-surface-variant">
+                              <Icon name="calendar_today" className="w-3.5 h-3.5" />
+                              {item.period}
+                            </div>
+                            {durationText && (
+                              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant font-label-code text-xs text-on-surface-variant">
+                                <Icon name="schedule" className="w-3.5 h-3.5" />
+                                {durationText}
+                              </div>
+                            )}
+                            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant font-label-code text-xs text-on-surface-variant">
+                              <Icon name="location_on" className="w-3.5 h-3.5" />
+                              {item.location}
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                )
+              })}
             </div>
           </div>
 
@@ -164,50 +169,54 @@ const Experience = (_props: ExperienceProps) => {
                 >
                   <div className="relative flex flex-col gap-6 pb-4">
                     <div className="absolute left-[15px] top-6 bottom-6 w-px bg-outline-variant hidden sm:block"></div>
-                    {experiences.previous.map((item, index) => (
-                      <motion.div
-                        key={item.company}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.35, delay: index * 0.1 }}
-                        className="relative w-full"
-                      >
-                        <div className={`absolute left-[11px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full ${item.dotColor} hidden sm:block z-10 ring-4 ring-slate-900`}></div>
-                        <div className="sm:ml-12 flex-grow bg-surface-container opacity-80 hover:opacity-100 rounded-xl p-6 border border-outline-variant hover:border-outline transition-all">
-                          <div className="flex flex-col sm:flex-row gap-6">
-                            <CompanyLogo item={item} />
-                            <div className="flex-grow">
-                              <div className="flex flex-col sm:flex-row justify-between items-start gap-4 mb-2">
-                                <div>
-                                  <h4 className="font-headline-md text-xl font-bold text-on-surface mb-1">
-                                    {item.role}
-                                  </h4>
-                                  <p className="font-body-md text-on-surface-variant">
-                                    {item.company}
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="flex flex-wrap gap-3 mt-4 mb-4">
-                                <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant font-label-code text-xs text-on-surface-variant">
-                                  <Icon name="calendar_today" className="w-3.5 h-3.5" />
-                                  {item.period}
-                                </div>
-                                {item.duration && (
-                                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant font-label-code text-xs text-on-surface-variant">
-                                    <Icon name="schedule" className="w-3.5 h-3.5" />
-                                    {item.duration}
+                    {experiences.previous.map((item, index) => {
+                      const durationText = item.startDate ? calculateDuration(item.startDate, item.endDate) : item.duration
+
+                      return (
+                        <motion.div
+                          key={item.company}
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.35, delay: index * 0.1 }}
+                          className="relative w-full"
+                        >
+                          <div className={`absolute left-[11px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full ${item.dotColor} hidden sm:block z-10 ring-4 ring-slate-900`}></div>
+                          <div className="sm:ml-12 flex-grow bg-surface-container opacity-80 hover:opacity-100 rounded-xl p-6 border border-outline-variant hover:border-outline transition-all">
+                            <div className="flex flex-col sm:flex-row gap-6">
+                              <CompanyLogo item={item} />
+                              <div className="flex-grow">
+                                <div className="flex flex-col sm:flex-row justify-between items-start gap-4 mb-2">
+                                  <div>
+                                    <h4 className="font-headline-md text-xl font-bold text-on-surface mb-1">
+                                      {item.role}
+                                    </h4>
+                                    <p className="font-body-md text-on-surface-variant">
+                                      {item.company}
+                                    </p>
                                   </div>
-                                )}
-                                <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant font-label-code text-xs text-on-surface-variant">
-                                  <Icon name="location_on" className="w-3.5 h-3.5" />
-                                  {item.location}
+                                </div>
+                                <div className="flex flex-wrap gap-3 mt-4 mb-4">
+                                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant font-label-code text-xs text-on-surface-variant">
+                                    <Icon name="calendar_today" className="w-3.5 h-3.5" />
+                                    {item.period}
+                                  </div>
+                                  {durationText && (
+                                    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant font-label-code text-xs text-on-surface-variant">
+                                      <Icon name="schedule" className="w-3.5 h-3.5" />
+                                      {durationText}
+                                    </div>
+                                  )}
+                                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant font-label-code text-xs text-on-surface-variant">
+                                    <Icon name="location_on" className="w-3.5 h-3.5" />
+                                    {item.location}
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      </motion.div>
-                    ))}
+                        </motion.div>
+                      )
+                    })}
                   </div>
                 </motion.div>
               )}

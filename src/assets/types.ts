@@ -57,6 +57,8 @@ export interface ExperienceItem {
   colorText: string
   period: string
   duration?: string
+  startDate?: string
+  endDate?: string
   location: string
   badgeColor?: string
   dotColor: string
