@@ -16,7 +16,7 @@ const Experience = (_props: ExperienceProps) => {
   const { experiences } = portfolioData
 
   return (
-    <section className="py-margin-desktop bg-slate-900" id="experiencia">
+    <section className="py-margin-desktop bg-slate-900 scroll-mt-16" id="experiencia">
       <div className="max-w-max-width mx-auto px-gutter">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

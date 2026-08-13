@@ -9,7 +9,7 @@ const Projects = (_props: ProjectsProps) => {
   const { projects } = portfolioData
 
   return (
-    <section className="py-margin-desktop bg-surface-dim" id="projetos">
+    <section className="py-margin-desktop bg-surface-dim scroll-mt-16" id="projetos">
       <div className="max-w-max-width mx-auto px-gutter">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

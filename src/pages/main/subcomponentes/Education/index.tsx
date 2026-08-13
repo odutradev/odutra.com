@@ -9,7 +9,7 @@ const Education = (_props: EducationProps) => {
   const { education } = portfolioData
 
   return (
-    <section className="py-margin-desktop bg-surface-dim border-t border-outline-variant" id="formacao">
+    <section className="py-margin-desktop bg-surface-dim border-t border-outline-variant scroll-mt-16" id="formacao">
       <div className="max-w-max-width mx-auto px-gutter">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

@@ -9,7 +9,7 @@ const Contact = (_props: ContactProps) => {
   const { personalInfo, socialLinks } = portfolioData
 
   return (
-    <section className="py-margin-desktop bg-slate-900 border-t border-outline-variant" id="contato">
+    <section className="py-margin-desktop bg-slate-900 border-t border-outline-variant scroll-mt-16" id="contato">
       <div className="max-w-max-width mx-auto px-gutter py-margin-desktop">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <motion.div

@@ -20,7 +20,7 @@ const Technologies = (_props: TechnologiesProps) => {
   const { technologyCategories } = portfolioData
 
   return (
-    <section className="py-margin-desktop bg-surface" id="tecnologias">
+    <section className="py-margin-desktop bg-surface scroll-mt-16" id="tecnologias">
       <div className="max-w-max-width mx-auto px-gutter">
         <div className="w-full">
           {technologyCategories.map((category, index) => {
