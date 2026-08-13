@@ -15,6 +15,7 @@ export interface PersonalInfo {
   phone: string
   phoneUrl: string
   emailUrl: string
+  whatsappUrl: string
   copyright: string
 }
 

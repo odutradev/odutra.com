@@ -47,7 +47,9 @@ const Contact = (_props: ContactProps) => {
             className="flex flex-col gap-8"
           >
             <motion.a
-              href={personalInfo.emailUrl}
+              href={personalInfo.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="inline-flex items-center justify-between bg-slate-900 border border-on-surface text-on-surface px-6 py-4 rounded-lg group hover:bg-on-surface hover:text-slate-900 transition-all duration-300"
@@ -58,30 +60,7 @@ const Contact = (_props: ContactProps) => {
               <Icon name="arrow_forward" className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </motion.a>
 
-            <div className="flex flex-col gap-4">
-              <a
-                href={personalInfo.emailUrl}
-                className="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors group"
-              >
-                <Icon name="mail" className="w-5 h-5 transition-transform group-hover:scale-110" />
-                <span className="font-body-md">
-                  {personalInfo.email}
-                </span>
-              </a>
-              <a
-                href={personalInfo.phoneUrl}
-                className="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors group"
-              >
-                <Icon name="call" className="w-5 h-5 transition-transform group-hover:scale-110" />
-                <span className="font-body-md">
-                  {personalInfo.phone}
-                </span>
-              </a>
-            </div>
-
-            <hr className="border-outline-variant" />
-
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4">
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={social.name}
@@ -89,6 +68,7 @@ const Contact = (_props: ContactProps) => {
                   target={social.url.startsWith('http') ? '_blank' : '_self'}
                   rel={social.url.startsWith('http') ? 'noopener noreferrer' : undefined}
                   aria-label={social.name}
+                  title={social.name}
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}

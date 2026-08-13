@@ -18,6 +18,7 @@ const portfolioData: PortfolioData = {
     phone: "+55 (31) 99710-0959",
     phoneUrl: "tel:+5531997100959",
     emailUrl: "mailto:joao.vitornl@gmail.com",
+    whatsappUrl: "https://wa.me/5531997100959",
     copyright: "© 2024 odutradev. Built for high performance."
   },
   navLinks: [
@@ -275,10 +276,12 @@ const portfolioData: PortfolioData = {
     }
   ],
   socialLinks: [
-    { name: "Instagram", icon: "photo_camera", url: "#" },
-    { name: "Website", icon: "language", url: "#" },
-    { name: "Design", icon: "brush", url: "#" },
-    { name: "LinkedIn", icon: "link", url: "https://linkedin.com/in/joãovitordutra/" }
+    { name: "Número", icon: "whatsapp", url: "https://wa.me/5531997100959" },
+    { name: "Email", icon: "mail", url: "mailto:joao.vitornl@gmail.com" },
+    { name: "LinkedIn", icon: "linkedin", url: "https://linkedin.com/in/jo%C3%A3ovitordutra/" },
+    { name: "GitHub", icon: "github", url: "https://github.com/odutradev" },
+    { name: "Instagram", icon: "instagram", url: "https://instagram.com/soueudutra" },
+    { name: "TikTok", icon: "tiktok", url: "https://tiktok.com/@soueudutra" }
   ]
 }
 
