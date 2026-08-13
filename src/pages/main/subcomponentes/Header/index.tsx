@@ -1,5 +1,6 @@
 import { useTheme } from '../../../../context/ThemeContext'
 import portfolioData from '../../../../assets/data'
+import Icon from '../../../../components/Icon'
 
 import type { HeaderProps } from './types'
 
@@ -34,9 +35,7 @@ const Header = (_props: HeaderProps) => {
           aria-label="Toggle Dark Mode"
           className="text-primary hover:text-primary transition-colors duration-300 active:scale-95 transition-transform"
         >
-          <span className="material-symbols-outlined">
-            {isDarkMode ? 'dark_mode' : 'light_mode'}
-          </span>
+          <Icon name={isDarkMode ? 'dark_mode' : 'light_mode'} className="w-6 h-6" />
         </button>
       </div>
     </header>

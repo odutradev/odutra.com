@@ -1,4 +1,5 @@
 import portfolioData from '../../../../assets/data'
+import Icon from '../../../../components/Icon'
 
 import type { ProjectsProps } from './types'
 
@@ -18,9 +19,7 @@ const Projects = (_props: ProjectsProps) => {
               className="bg-glass-fill backdrop-blur-xl border border-slate-700 rounded-xl p-6 hover-ghost-border transition-all duration-300 group"
             >
               <div className="h-32 bg-slate-800 rounded-lg mb-4 flex items-center justify-center">
-                <span className="material-symbols-outlined text-electric-blue text-4xl">
-                  {project.icon}
-                </span>
+                <Icon name={project.icon} className="text-electric-blue w-10 h-10" />
               </div>
               <h3 className="font-body-lg font-bold text-on-surface mb-2">
                 {project.title}

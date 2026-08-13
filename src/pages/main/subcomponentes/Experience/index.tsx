@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react'
 
 import portfolioData from '../../../../assets/data'
+import Icon from '../../../../components/Icon'
 
 import type { ExperienceProps } from './types'
 
@@ -47,9 +48,7 @@ const Experience = (_props: ExperienceProps) => {
                             {item.short}
                           </span>
                         ) : (
-                          <span className="material-symbols-outlined text-3xl">
-                            {item.icon}
-                          </span>
+                          <Icon name={item.icon || ''} className="w-8 h-8" />
                         )}
                       </div>
                       <div className="flex-grow">
@@ -69,23 +68,17 @@ const Experience = (_props: ExperienceProps) => {
                         </div>
                         <div className="flex flex-wrap gap-3 mt-4 mb-4">
                           <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant font-label-code text-xs text-on-surface-variant">
-                            <span className="material-symbols-outlined text-[14px]">
-                              calendar_today
-                            </span>
+                            <Icon name="calendar_today" className="w-3.5 h-3.5" />
                             {item.period}
                           </div>
                           {item.duration && (
                             <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant font-label-code text-xs text-on-surface-variant">
-                              <span className="material-symbols-outlined text-[14px]">
-                                schedule
-                              </span>
+                              <Icon name="schedule" className="w-3.5 h-3.5" />
                               {item.duration}
                             </div>
                           )}
                           <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant font-label-code text-xs text-on-surface-variant">
-                            <span className="material-symbols-outlined text-[14px]">
-                              location_on
-                            </span>
+                            <Icon name="location_on" className="w-3.5 h-3.5" />
                             {item.location}
                           </div>
                         </div>
@@ -108,9 +101,7 @@ const Experience = (_props: ExperienceProps) => {
               <span className="w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-label-code text-xs border border-outline-variant">
                 {experiences.previous.length}
               </span>
-              <span className="material-symbols-outlined text-on-surface-variant text-sm group-hover:text-on-surface transition-colors">
-                {showPreviousExperiences ? 'expand_less' : 'expand_more'}
-              </span>
+              <Icon name={showPreviousExperiences ? 'expand_less' : 'expand_more'} className="w-4 h-4 text-on-surface-variant group-hover:text-on-surface transition-colors" />
             </div>
 
             {showPreviousExperiences && (
@@ -139,23 +130,17 @@ const Experience = (_props: ExperienceProps) => {
                           </div>
                           <div className="flex flex-wrap gap-3 mt-4 mb-4">
                             <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant font-label-code text-xs text-on-surface-variant">
-                              <span className="material-symbols-outlined text-[14px]">
-                                calendar_today
-                              </span>
+                              <Icon name="calendar_today" className="w-3.5 h-3.5" />
                               {item.period}
                             </div>
                             {item.duration && (
                               <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant font-label-code text-xs text-on-surface-variant">
-                                <span className="material-symbols-outlined text-[14px]">
-                                  schedule
-                                </span>
+                                <Icon name="schedule" className="w-3.5 h-3.5" />
                                 {item.duration}
                               </div>
                             )}
                             <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant font-label-code text-xs text-on-surface-variant">
-                              <span className="material-symbols-outlined text-[14px]">
-                                location_on
-                              </span>
+                              <Icon name="location_on" className="w-3.5 h-3.5" />
                               {item.location}
                             </div>
                           </div>

@@ -1,4 +1,5 @@
 import portfolioData from '../../../../assets/data'
+import Icon from '../../../../components/Icon'
 
 import type { ContactProps } from './types'
 
@@ -34,18 +35,14 @@ const Contact = (_props: ContactProps) => {
               <span className="font-label-caps tracking-widest">
                 SOLICITAR ORÇAMENTO
               </span>
-              <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">
-                arrow_forward
-              </span>
+              <Icon name="arrow_forward" className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </a>
             <div className="flex flex-col gap-4">
               <a
                 href={personalInfo.emailUrl}
                 className="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors"
               >
-                <span className="material-symbols-outlined">
-                  mail
-                </span>
+                <Icon name="mail" className="w-5 h-5" />
                 <span className="font-body-md">
                   {personalInfo.email}
                 </span>
@@ -54,9 +51,7 @@ const Contact = (_props: ContactProps) => {
                 href={personalInfo.phoneUrl}
                 className="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors"
               >
-                <span className="material-symbols-outlined">
-                  call
-                </span>
+                <Icon name="call" className="w-5 h-5" />
                 <span className="font-body-md">
                   {personalInfo.phone}
                 </span>
@@ -73,9 +68,7 @@ const Contact = (_props: ContactProps) => {
                   aria-label={social.name}
                   className="w-12 h-12 flex items-center justify-center border border-outline-variant rounded-lg text-on-surface-variant hover:border-primary hover:text-primary transition-all"
                 >
-                  <span className="material-symbols-outlined">
-                    {social.icon}
-                  </span>
+                  <Icon name={social.icon} className="w-5 h-5" />
                 </a>
               ))}
             </div>

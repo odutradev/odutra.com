@@ -1,4 +1,5 @@
 import portfolioData from '../../../../assets/data'
+import Icon from '../../../../components/Icon'
 
 import type { EducationProps } from './types'
 
@@ -18,9 +19,7 @@ const Education = (_props: EducationProps) => {
               className="bg-slate-900 rounded-lg p-6 border border-slate-700 flex flex-col justify-between"
             >
               <div>
-                <span className="material-symbols-outlined text-electric-blue mb-4 text-[32px]">
-                  {item.icon}
-                </span>
+                <Icon name={item.icon} className="text-electric-blue mb-4 w-8 h-8" />
                 <h3 className="font-body-md font-bold text-on-surface mb-2">
                   {item.course}
                 </h3>

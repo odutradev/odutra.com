@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react'
 
 import portfolioData from '../../../../assets/data'
+import Icon from '../../../../components/Icon'
 
 import type { TechnologiesProps } from './types'
 
@@ -41,9 +42,7 @@ const Technologies = (_props: TechnologiesProps) => {
                       {category.count}
                     </span>
                   </div>
-                  <span className="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">
-                    {isExpanded ? 'expand_less' : 'expand_more'}
-                  </span>
+                  <Icon name={isExpanded ? 'expand_less' : 'expand_more'} className="w-6 h-6 text-on-surface-variant group-hover:text-primary transition-colors" />
                 </button>
 
                 {isExpanded && (

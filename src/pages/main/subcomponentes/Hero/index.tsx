@@ -1,4 +1,5 @@
 import portfolioData from '../../../../assets/data'
+import Icon from '../../../../components/Icon'
 
 import type { HeroProps } from './types'
 
@@ -24,9 +25,7 @@ const Hero = (_props: HeroProps) => {
             className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-electric-blue text-pure-white rounded-lg font-body-md font-medium hover:bg-inverse-primary transition-colors group"
           >
             Vamos conversar
-            <span className="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">
-              arrow_forward
-            </span>
+            <Icon name="arrow_forward" className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </a>
           <a
             href="#experiencia"
