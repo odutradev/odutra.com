@@ -49,7 +49,7 @@ const Technologies = () => {
                     {category.items.map((techItem) => (
                       <div
                         key={techItem.name}
-                        className="flex items-center gap-4 p-4 rounded-xl bg-pure-white dark:bg-surface-container border border-slate-200 dark:border-outline-variant hover:border-primary transition-colors"
+                        className="flex items-center gap-4 p-4 rounded-xl bg-surface-container border border-outline-variant hover:border-primary transition-colors"
                       >
                         <div className={`w-8 h-8 rounded ${techItem.bg} ${techItem.color} flex items-center justify-center font-bold text-xs`}>
                           {techItem.code}

@@ -36,7 +36,7 @@ const Experience = () => {
               <div className="absolute left-[15px] top-6 bottom-6 w-px bg-outline-variant hidden sm:block"></div>
               {experiences.current.map((item) => (
                 <div key={item.company} className="relative w-full">
-                  <div className={`absolute left-[11px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full ${item.dotColor} hidden sm:block z-10 shadow-[0_0_0_4px_#0A0A0A]`}></div>
+                  <div className={`absolute left-[11px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full ${item.dotColor} hidden sm:block z-10 ring-4 ring-slate-900`}></div>
                   <div className="sm:ml-12 flex-grow bg-surface-container rounded-xl p-6 border border-outline-variant hover:border-outline transition-colors">
                     <div className="flex flex-col sm:flex-row gap-6">
                       <div className={`w-16 h-16 rounded-xl ${item.colorBg} ${item.colorText} flex items-center justify-center shrink-0`}>
@@ -116,7 +116,7 @@ const Experience = () => {
                 <div className="absolute left-[15px] top-6 bottom-6 w-px bg-outline-variant hidden sm:block"></div>
                 {experiences.previous.map((item) => (
                   <div key={item.company} className="relative w-full">
-                    <div className={`absolute left-[11px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full ${item.dotColor} hidden sm:block z-10 shadow-[0_0_0_4px_#0A0A0A]`}></div>
+                    <div className={`absolute left-[11px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full ${item.dotColor} hidden sm:block z-10 ring-4 ring-slate-900`}></div>
                     <div className="sm:ml-12 flex-grow bg-surface-container opacity-80 hover:opacity-100 rounded-xl p-6 border border-outline-variant hover:border-outline transition-all">
                       <div className="flex flex-col sm:flex-row gap-6">
                         <div className={`w-16 h-16 rounded-xl ${item.colorBg} ${item.colorText} flex items-center justify-center shrink-0`}>

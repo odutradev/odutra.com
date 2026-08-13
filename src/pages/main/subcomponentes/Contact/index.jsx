@@ -27,7 +27,7 @@ const Contact = () => {
           <div className="flex flex-col gap-8">
             <a
               href={personalInfo.emailUrl}
-              className="inline-flex items-center justify-between bg-slate-900 border border-on-surface text-pure-white px-6 py-4 rounded-lg group hover:bg-on-surface hover:text-slate-900 transition-all duration-300"
+              className="inline-flex items-center justify-between bg-slate-900 border border-on-surface text-on-surface px-6 py-4 rounded-lg group hover:bg-on-surface hover:text-slate-900 transition-all duration-300"
             >
               <span className="font-label-caps tracking-widest">
                 SOLICITAR ORÇAMENTO

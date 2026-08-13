@@ -1,21 +1,8 @@
-import { useState, useCallback } from 'react'
-
+import { useTheme } from '../../../../context/ThemeContext'
 import portfolioData from '../../../../assets/data'
 
 const Header = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true)
-
-  const handleToggleTheme = useCallback(() => {
-    setIsDarkMode((previousMode) => {
-      const nextMode = !previousMode
-      if (nextMode) {
-        document.documentElement.classList.add('dark')
-      } else {
-        document.documentElement.classList.remove('dark')
-      }
-      return nextMode
-    })
-  }, [])
+  const { isDarkMode, toggleTheme } = useTheme()
 
   const { personalInfo, navLinks } = portfolioData
 
@@ -41,7 +28,7 @@ const Header = () => {
           ))}
         </nav>
         <button
-          onClick={handleToggleTheme}
+          onClick={toggleTheme}
           aria-label="Toggle Dark Mode"
           className="text-primary hover:text-primary transition-colors duration-300 active:scale-95 transition-transform"
         >
