@@ -3,15 +3,14 @@ import { useState, useCallback } from 'react'
 import portfolioData from '../../../../assets/portfolioData'
 
 const Technologies = () => {
-  const [expandedCategories, setExpandedCategories] = useState({
-    frontend: true
-  })
+  const [expandedCategory, setExpandedCategory] = useState('frontend')
 
   const handleToggleCategory = useCallback((categoryId) => {
-    setExpandedCategories((previousState) => ({
-      ...previousState,
-      [categoryId]: !previousState[categoryId]
-    }))
+    setExpandedCategory((previousCategory) => (
+      previousCategory === categoryId
+        ? null
+        : categoryId
+    ))
   }, [])
 
   const { technologyCategories } = portfolioData
@@ -21,13 +20,12 @@ const Technologies = () => {
       <div className="max-w-max-width mx-auto px-gutter">
         <div className="w-full">
           {technologyCategories.map((category, index) => {
-            const isExpanded = Boolean(expandedCategories[category.id])
-            const isLast = index === technologyCategories.length - 1
+            const isExpanded = expandedCategory === category.id
 
             return (
               <div
                 key={category.id}
-                className={index === 0 ? "mb-6" : isLast ? "border-t border-outline-variant border-b pb-6" : "border-t border-outline-variant"}
+                className={index > 0 ? "border-t border-outline-variant" : ""}
               >
                 <button
                   onClick={() => handleToggleCategory(category.id)}
@@ -73,3 +71,4 @@ const Technologies = () => {
 }
 
 export default Technologies
+
