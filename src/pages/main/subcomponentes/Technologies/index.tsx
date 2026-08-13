@@ -1,4 +1,5 @@
-import { useState, useCallback } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
+import { useCallback, useState } from 'react'
 
 import portfolioData from '../../../../assets/data'
 import Icon from '../../../../components/Icon'
@@ -26,8 +27,12 @@ const Technologies = (_props: TechnologiesProps) => {
             const isExpanded = expandedCategory === category.id
 
             return (
-              <div
+              <motion.div
                 key={category.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
                 className={index > 0 ? "border-t border-outline-variant" : ""}
               >
                 <button
@@ -42,31 +47,50 @@ const Technologies = (_props: TechnologiesProps) => {
                       {category.count}
                     </span>
                   </div>
-                  <Icon name={isExpanded ? 'expand_less' : 'expand_more'} className="w-6 h-6 text-on-surface-variant group-hover:text-primary transition-colors" />
+                  <motion.div
+                    animate={{ rotate: isExpanded ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <Icon name="expand_more" className="w-6 h-6 text-on-surface-variant group-hover:text-primary transition-colors" />
+                  </motion.div>
                 </button>
 
-                {isExpanded && (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 pb-6">
-                    {category.items.map((techItem) => (
-                      <div
-                        key={techItem.name}
-                        className="flex items-center gap-4 p-4 rounded-xl bg-surface-container border border-outline-variant hover:border-primary transition-colors"
-                      >
-                        <div className={`w-8 h-8 rounded ${techItem.bg} ${techItem.color} flex items-center justify-center font-bold text-xs`}>
-                          {techItem.icon ? (
-                            <Icon name={techItem.icon} className="w-5 h-5" />
-                          ) : (
-                            techItem.code
-                          )}
-                        </div>
-                        <span className="font-body-md text-on-surface font-medium">
-                          {techItem.name}
-                        </span>
+                <AnimatePresence initial={false}>
+                  {isExpanded && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.35, ease: 'easeInOut' }}
+                      className="overflow-hidden"
+                    >
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 pb-6">
+                        {category.items.map((techItem, techIndex) => (
+                          <motion.div
+                            key={techItem.name}
+                            initial={{ opacity: 0, scale: 0.9, y: 10 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            transition={{ duration: 0.3, delay: techIndex * 0.04 }}
+                            whileHover={{ scale: 1.03, y: -2 }}
+                            className="flex items-center gap-4 p-4 rounded-xl bg-surface-container border border-outline-variant hover:border-primary transition-colors cursor-default"
+                          >
+                            <div className={`w-8 h-8 rounded ${techItem.bg} ${techItem.color} flex items-center justify-center font-bold text-xs shrink-0`}>
+                              {techItem.icon ? (
+                                <Icon name={techItem.icon} className="w-5 h-5" />
+                              ) : (
+                                techItem.code
+                              )}
+                            </div>
+                            <span className="font-body-md text-on-surface font-medium">
+                              {techItem.name}
+                            </span>
+                          </motion.div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                )}
-              </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
             )
           })}
         </div>

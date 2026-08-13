@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 import portfolioData from '../../../../assets/data'
 import Icon from '../../../../components/Icon'
 
@@ -9,31 +11,55 @@ const Hero = (_props: HeroProps) => {
   return (
     <section className="relative pt-margin-desktop pb-24 bg-grid-pattern overflow-hidden" id="sobre">
       <div className="max-w-max-width mx-auto px-gutter relative z-10 flex flex-col items-center text-center">
-        <div className="mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-glass-fill border border-slate-700 font-label-code text-label-code text-on-surface-variant">
-          <span className="w-2 h-2 rounded-full bg-electric-blue"></span>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+          className="mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-glass-fill border border-slate-700 font-label-code text-label-code text-on-surface-variant"
+        >
+          <span className="w-2 h-2 rounded-full bg-electric-blue animate-pulse"></span>
           {personalInfo.badge}
-        </div>
-        <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6 max-w-3xl">
+        </motion.div>
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
+          className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6 max-w-3xl"
+        >
           {personalInfo.heroTitle}
-        </h1>
-        <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.25, ease: 'easeOut' }}
+          className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12"
+        >
           {personalInfo.heroBio}
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <a
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4, ease: 'easeOut' }}
+          className="flex flex-col sm:flex-row gap-4"
+        >
+          <motion.a
             href="#contato"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-electric-blue text-pure-white rounded-lg font-body-md font-medium hover:bg-inverse-primary transition-colors group"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-electric-blue text-pure-white rounded-lg font-body-md font-medium hover:bg-inverse-primary transition-colors group shadow-lg shadow-electric-blue/20"
           >
             Vamos conversar
             <Icon name="arrow_forward" className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </a>
-          <a
-            href="#experiencia"
+          </motion.a>
+          <motion.a
+            href="#projetos"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             className="inline-flex items-center justify-center px-6 py-3 border border-slate-700 text-on-surface rounded-lg font-body-md font-medium hover:bg-glass-fill transition-colors"
           >
             Ver projetos
-          </a>
-        </div>
+          </motion.a>
+        </motion.div>
       </div>
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-slate-900 to-transparent"></div>
     </section>
