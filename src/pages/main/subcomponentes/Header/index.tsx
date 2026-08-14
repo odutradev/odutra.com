@@ -1,13 +1,13 @@
 import { useCallback, useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 
-import { useThemeStore } from '@stores/useThemeStore'
 import { scrollToSection } from '@utils/scroll'
+import { useSystemStore } from '@stores/system'
 import portfolioData from '@assets/data'
 import Icon from '@components/Icon'
 
 const Header = () => {
-  const { isDarkMode, toggleTheme } = useThemeStore()
+  const { isDarkMode, toggleTheme } = useSystemStore()
   const [activeSection, setActiveSection] = useState<string>('#sobre')
 
   const { personalInfo, navLinks } = portfolioData

@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 
-import type { ThemeState, Theme } from './types'
+import type { SystemState, Theme } from './types'
 
 const getInitialTheme = (): Theme => {
   const savedTheme = localStorage.getItem('theme')
@@ -28,12 +28,12 @@ if (typeof window !== 'undefined') {
     if (!localStorage.getItem('theme')) {
       const nextTheme: Theme = event.matches ? 'dark' : 'light'
       applyThemeClass(nextTheme)
-      useThemeStore.setState({ theme: nextTheme, isDarkMode: nextTheme === 'dark' })
+      useSystemStore.setState({ theme: nextTheme, isDarkMode: nextTheme === 'dark' })
     }
   })
 }
 
-export const useThemeStore = create<ThemeState>((set) => ({
+export const useSystemStore = create<SystemState>((set) => ({
   theme: initialTheme,
   isDarkMode: initialTheme === 'dark',
   toggleTheme: () => {
@@ -45,6 +45,14 @@ export const useThemeStore = create<ThemeState>((set) => ({
         theme: nextTheme,
         isDarkMode: nextTheme === 'dark'
       }
+    })
+  },
+  setTheme: (theme: Theme) => {
+    localStorage.setItem('theme', theme)
+    applyThemeClass(theme)
+    set({
+      theme,
+      isDarkMode: theme === 'dark'
     })
   }
 }))
