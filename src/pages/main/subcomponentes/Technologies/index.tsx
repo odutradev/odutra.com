@@ -60,9 +60,9 @@ const Technologies = () => {
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.35, ease: 'easeInOut' }}
-                      className="overflow-hidden"
+                      className="overflow-hidden -mx-4 px-4"
                     >
-                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 pb-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pt-4 pb-6 px-1 py-1">
                         {category.items.map((techItem, techIndex) => (
                           <motion.div
                             key={techItem.name}
@@ -70,7 +70,7 @@ const Technologies = () => {
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             transition={{ duration: 0.3, delay: techIndex * 0.04 }}
                             whileHover={{ scale: 1.03, y: -2 }}
-                            className="flex items-center gap-4 p-4 rounded-xl bg-surface-container border border-outline-variant hover:border-primary transition-colors cursor-default"
+                            className="flex items-center gap-4 p-4 rounded-xl bg-surface-container border border-outline-variant hover:border-primary transition-colors cursor-default relative hover:z-10"
                           >
                             <div className={`w-8 h-8 rounded ${techItem.bg} ${techItem.color} flex items-center justify-center font-bold text-xs shrink-0`}>
                               {techItem.icon ? (
