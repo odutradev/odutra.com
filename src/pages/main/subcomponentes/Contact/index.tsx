@@ -7,7 +7,7 @@ const Contact = () => {
   const { personalInfo, socialLinks } = portfolioData
 
   return (
-    <section className="py-margin-desktop bg-slate-900 border-t border-outline-variant scroll-mt-16" id="contato">
+    <section className="py-margin-desktop bg-surface-dim border-t border-outline-variant scroll-mt-16" id="contato">
       <div className="max-w-max-width mx-auto px-gutter py-margin-desktop">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <motion.div
@@ -50,7 +50,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center justify-between bg-slate-900 border border-on-surface text-on-surface px-6 py-4 rounded-lg group hover:bg-on-surface hover:text-slate-900 transition-all duration-300"
+              className="inline-flex items-center justify-between bg-surface border border-on-surface text-on-surface px-6 py-4 rounded-lg group hover:bg-on-surface hover:text-slate-900 transition-all duration-300"
             >
               <span className="font-label-caps tracking-widest">
                 SOLICITAR ORÇAMENTO
