@@ -1,6 +1,6 @@
 import Technologies from './subcomponentes/Technologies'
 import Experience from './subcomponentes/Experience'
-import Projects from './subcomponentes/Projects'
+// import Projects from './subcomponentes/Projects'
 import Contact from './subcomponentes/Contact'
 import Header from './subcomponentes/Header'
 import Footer from './subcomponentes/Footer'
@@ -13,7 +13,7 @@ const MainPage = () => {
       <main className="flex-grow pt-16">
         <Hero />
         <Technologies />
-        <Projects />
+        {/* <Projects /> */}
         <Experience />
       </main>
       <Contact />
