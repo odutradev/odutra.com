@@ -4,9 +4,7 @@ import { scrollToSection } from '@utils/scroll'
 import portfolioData from '@assets/data'
 import Icon from '@components/Icon'
 
-import type { HeroProps } from './types'
-
-const Hero = (_props: HeroProps) => {
+const Hero = () => {
   const { personalInfo } = portfolioData
 
   return (

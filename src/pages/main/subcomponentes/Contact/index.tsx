@@ -3,9 +3,7 @@ import { motion } from 'framer-motion'
 import portfolioData from '@assets/data'
 import Icon from '@components/Icon'
 
-import type { ContactProps } from './types'
-
-const Contact = (_props: ContactProps) => {
+const Contact = () => {
   const { personalInfo, socialLinks } = portfolioData
 
   return (

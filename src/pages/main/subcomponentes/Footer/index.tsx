@@ -1,9 +1,7 @@
-import { FaHeart } from 'react-icons/fa'
 import { motion } from 'framer-motion'
+import { FaHeart } from 'react-icons/fa'
 
-import type { FooterProps } from './types'
-
-const Footer = (_props: FooterProps) => {
+const Footer = () => {
   return (
     <motion.footer
       initial={{ opacity: 0 }}

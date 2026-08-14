@@ -4,5 +4,4 @@ export interface ThemeState {
   theme: Theme
   isDarkMode: boolean
   toggleTheme: () => void
-  setTheme: (theme: Theme) => void
 }

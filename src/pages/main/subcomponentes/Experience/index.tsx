@@ -6,7 +6,6 @@ import portfolioData from '@assets/data'
 import Icon from '@components/Icon'
 
 import type { ExperienceItem } from '@assets/types'
-import type { ExperienceProps } from './types'
 
 interface CompanyLogoProps {
   item: ExperienceItem
@@ -45,7 +44,7 @@ const CompanyLogo = ({ item }: CompanyLogoProps) => {
   )
 }
 
-const Experience = (_props: ExperienceProps) => {
+const Experience = () => {
   const [showPreviousExperiences, setShowPreviousExperiences] = useState<boolean>(false)
 
   const handleTogglePrevious = useCallback(() => {

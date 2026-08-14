@@ -3,9 +3,7 @@ import { motion } from 'framer-motion'
 import portfolioData from '@assets/data'
 import Icon from '@components/Icon'
 
-import type { ProjectsProps } from './types'
-
-const Projects = (_props: ProjectsProps) => {
+const Projects = () => {
   const { projects } = portfolioData
 
   return (

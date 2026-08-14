@@ -1,12 +1,8 @@
-import type { PortfolioData, Config } from './types'
-
-const config: Config = {
-  pageTitle: "ODUTRADEV"
-}
+import type { PortfolioData } from './types'
 
 const portfolioData: PortfolioData = {
   personalInfo: {
-    brandName: "odutradev",
+    brandName: "odutra",
     badge: "Desenvolvedor Full-Stack & CEO",
     name: "João Vitor",
     heroTitle: "Opa, eu sou João Dutra",
@@ -14,12 +10,7 @@ const portfolioData: PortfolioData = {
     avatarUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuAngyl2Chy7Re_lMQoNqgCKIIrybUJ7rSTZz3_GcFi2DYQN3E03smJLWn_u3eBAxivfRF5y7PPuuigCPDQ4FEL4u9FpfCs8U1UY-h4UIwmO2g_WWvIhsp4oaXr9iAKSIu6BeppzKLCOwQBDEVNamZvG7ii3KA49nRILa9xjdUn97ma4ZXXHVx04X751mCpVYyYWTP419s5juqmdiGvQ809KrEdKkgPEfuWdZk71xmlSQFA5TmLhWhwJ",
     contactTitle: "Entre em contato, vamos trabalhar em seu projeto",
     contactBio: "Vamos criar juntos um website com estética forte e mensagem clara. Pronto para converter.",
-    email: "joao.vitornl@gmail.com",
-    phone: "+55 (31) 99710-0959",
-    phoneUrl: "tel:+5531997100959",
-    emailUrl: "mailto:joao.vitornl@gmail.com",
-    whatsappUrl: "https://wa.me/5531997100959",
-    copyright: "© 2024 odutradev. Built for high performance."
+    whatsappUrl: "https://wa.me/5531997100959"
   },
   navLinks: [
     { label: "Sobre", href: "#sobre" },
@@ -33,8 +24,6 @@ const portfolioData: PortfolioData = {
     {
       id: "languages",
       title: "Linguagens",
-      count: 6,
-      defaultExpanded: true,
       items: [
         { name: "TypeScript", code: "TS", bg: "bg-blue-100/10", color: "text-blue-600", icon: "typescript" },
         { name: "JavaScript", code: "JS", bg: "bg-yellow-100/10", color: "text-yellow-500", icon: "javascript" },
@@ -47,8 +36,6 @@ const portfolioData: PortfolioData = {
     {
       id: "frontend",
       title: "Frontend & Mobile",
-      count: 12,
-      defaultExpanded: false,
       items: [
         { name: "React", code: "RE", bg: "bg-cyan-100/10", color: "text-cyan-500", icon: "react" },
         { name: "React Native", code: "RN", bg: "bg-cyan-100/10", color: "text-cyan-400", icon: "react_native" },
@@ -67,8 +54,6 @@ const portfolioData: PortfolioData = {
     {
       id: "backend",
       title: "Backend",
-      count: 5,
-      defaultExpanded: false,
       items: [
         { name: "Node.js", code: "NO", bg: "bg-green-100/10", color: "text-green-500", icon: "nodejs" },
         { name: "Express.js", code: "EX", bg: "bg-slate-100/10", color: "text-slate-300", icon: "express" },
@@ -80,8 +65,6 @@ const portfolioData: PortfolioData = {
     {
       id: "database",
       title: "Banco de Dados & BaaS",
-      count: 4,
-      defaultExpanded: false,
       items: [
         { name: "PostgreSQL", code: "PG", bg: "bg-blue-100/10", color: "text-blue-400", icon: "postgresql" },
         { name: "MongoDB", code: "MG", bg: "bg-green-100/10", color: "text-green-500", icon: "mongodb" },
@@ -92,8 +75,6 @@ const portfolioData: PortfolioData = {
     {
       id: "infrastructure",
       title: "Infraestrutura & Cloud",
-      count: 7,
-      defaultExpanded: false,
       items: [
         { name: "Docker", code: "DK", bg: "bg-blue-100/10", color: "text-blue-500", icon: "docker" },
         { name: "Vercel", code: "VC", bg: "bg-slate-100/10", color: "text-slate-200", icon: "vercel" },
@@ -107,8 +88,6 @@ const portfolioData: PortfolioData = {
     {
       id: "tools",
       title: "Ferramentas de Desenvolvimento",
-      count: 8,
-      defaultExpanded: false,
       items: [
         { name: "VS Code", code: "VS", bg: "bg-blue-100/10", color: "text-blue-500", icon: "vscode" },
         { name: "Postman", code: "PM", bg: "bg-orange-100/10", color: "text-orange-500", icon: "postman" },
@@ -123,8 +102,6 @@ const portfolioData: PortfolioData = {
     {
       id: "design",
       title: "Design, Mídia & Games",
-      count: 5,
-      defaultExpanded: false,
       items: [
         { name: "Figma", code: "FG", bg: "bg-purple-100/10", color: "text-purple-400", icon: "figma" },
         { name: "Canva", code: "CN", bg: "bg-cyan-100/10", color: "text-cyan-400", icon: "canva" },
@@ -136,8 +113,6 @@ const portfolioData: PortfolioData = {
     {
       id: "versionControl",
       title: "Controle de Versão & Documentação",
-      count: 5,
-      defaultExpanded: false,
       items: [
         { name: "Git", code: "GT", bg: "bg-orange-100/10", color: "text-orange-500", icon: "git" },
         { name: "GitHub", code: "GH", bg: "bg-slate-100/10", color: "text-slate-300", icon: "github" },
@@ -178,9 +153,7 @@ const portfolioData: PortfolioData = {
         colorText: "text-red-500",
         period: "Nov 2024 - Atualmente",
         startDate: "2024-11-01",
-        location: "Híbrido",
-        badgeColor: "bg-green-500",
-        dotColor: "bg-green-500"
+        location: "Híbrido"
       },
       {
         company: "Lite Technology LTDA",
@@ -191,9 +164,7 @@ const portfolioData: PortfolioData = {
         colorText: "text-cyan-500",
         period: "Jun 2024 - Atualmente",
         startDate: "2024-06-28",
-        location: "Remoto",
-        badgeColor: "bg-green-500",
-        dotColor: "bg-cyan-500"
+        location: "Remoto"
       }
     ],
     previous: [
@@ -208,8 +179,7 @@ const portfolioData: PortfolioData = {
         period: "Abr 2022 - Abr 2026",
         startDate: "2022-04-01",
         endDate: "2026-04-01",
-        location: "Híbrido",
-        dotColor: "bg-purple-500"
+        location: "Híbrido"
       },
       {
         company: "Dexpay",
@@ -221,8 +191,7 @@ const portfolioData: PortfolioData = {
         period: "Jun 2024 - Nov 2024",
         startDate: "2024-06-01",
         endDate: "2024-11-01",
-        location: "Híbrido",
-        dotColor: "bg-blue-500"
+        location: "Híbrido"
       },
       {
         company: "Agência A+ Fácil",
@@ -234,8 +203,7 @@ const portfolioData: PortfolioData = {
         period: "Nov 2021 - Jun 2024",
         startDate: "2021-11-01",
         endDate: "2024-06-01",
-        location: "Remoto",
-        dotColor: "bg-orange-500"
+        location: "Remoto"
       },
       {
         company: "Zenitech",
@@ -246,8 +214,7 @@ const portfolioData: PortfolioData = {
         period: "Jun 2021 - Nov 2021",
         startDate: "2021-06-01",
         endDate: "2021-11-01",
-        location: "Remoto",
-        dotColor: "bg-teal-500"
+        location: "Remoto"
       }
     ]
   },
@@ -287,5 +254,4 @@ const portfolioData: PortfolioData = {
   ]
 }
 
-export { config, portfolioData }
 export default portfolioData

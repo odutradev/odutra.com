@@ -7,9 +7,7 @@ import Header from './subcomponentes/Header'
 import Footer from './subcomponentes/Footer'
 import Hero from './subcomponentes/Hero'
 
-import type { MainPageProps } from './types'
-
-const MainPage = (_props: MainPageProps) => {
+const MainPage = () => {
   return (
     <div className="antialiased min-h-screen flex flex-col bg-background text-on-surface">
       <Header />

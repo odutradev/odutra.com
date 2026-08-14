@@ -6,9 +6,7 @@ import { scrollToSection } from '@utils/scroll'
 import portfolioData from '@assets/data'
 import Icon from '@components/Icon'
 
-import type { HeaderProps } from './types'
-
-const Header = (_props: HeaderProps) => {
+const Header = () => {
   const { isDarkMode, toggleTheme } = useThemeStore()
   const [activeSection, setActiveSection] = useState<string>('#sobre')
 

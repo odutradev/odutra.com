@@ -46,13 +46,5 @@ export const useThemeStore = create<ThemeState>((set) => ({
         isDarkMode: nextTheme === 'dark'
       }
     })
-  },
-  setTheme: (theme: Theme) => {
-    localStorage.setItem('theme', theme)
-    applyThemeClass(theme)
-    set({
-      theme,
-      isDarkMode: theme === 'dark'
-    })
   }
 }))

@@ -3,9 +3,7 @@ import { motion } from 'framer-motion'
 import portfolioData from '@assets/data'
 import Icon from '@components/Icon'
 
-import type { EducationProps } from './types'
-
-const Education = (_props: EducationProps) => {
+const Education = () => {
   const { education } = portfolioData
 
   return (

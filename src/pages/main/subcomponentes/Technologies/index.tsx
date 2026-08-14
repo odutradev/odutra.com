@@ -4,9 +4,7 @@ import { useCallback, useState } from 'react'
 import portfolioData from '@assets/data'
 import Icon from '@components/Icon'
 
-import type { TechnologiesProps } from './types'
-
-const Technologies = (_props: TechnologiesProps) => {
+const Technologies = () => {
   const [expandedCategory, setExpandedCategory] = useState<string | null>('languages')
 
   const handleToggleCategory = useCallback((categoryId: string) => {

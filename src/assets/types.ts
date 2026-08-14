@@ -1,7 +1,3 @@
-export interface Config {
-  pageTitle: string
-}
-
 export interface PersonalInfo {
   brandName: string
   badge: string
@@ -11,12 +7,7 @@ export interface PersonalInfo {
   avatarUrl: string
   contactTitle: string
   contactBio: string
-  email: string
-  phone: string
-  phoneUrl: string
-  emailUrl: string
   whatsappUrl: string
-  copyright: string
 }
 
 export interface NavLink {
@@ -35,8 +26,6 @@ export interface TechnologyItem {
 export interface TechnologyCategory {
   id: string
   title: string
-  count: number
-  defaultExpanded: boolean
   items: TechnologyItem[]
 }
 
@@ -60,8 +49,6 @@ export interface ExperienceItem {
   startDate?: string
   endDate?: string
   location: string
-  badgeColor?: string
-  dotColor: string
 }
 
 export interface ExperiencesData {
