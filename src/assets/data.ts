@@ -191,7 +191,7 @@ const portfolioData: PortfolioData = {
         colorText: "text-cyan-500",
         period: "Jun 2024 - Atualmente",
         startDate: "2024-06-28",
-        location: "Híbrido",
+        location: "Remoto",
         badgeColor: "bg-green-500",
         dotColor: "bg-cyan-500"
       }
@@ -239,7 +239,7 @@ const portfolioData: PortfolioData = {
       },
       {
         company: "Zenitech",
-        role: "Desenvolvedor Full-stack",
+        role: "Desenvolvedor Backend",
         short: "Z",
         colorBg: "bg-teal-500/10",
         colorText: "text-teal-500",
