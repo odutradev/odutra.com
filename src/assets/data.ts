@@ -4,12 +4,12 @@ const portfolioData: PortfolioData = {
   personalInfo: {
     brandName: "odutra",
     badge: "Desenvolvedor Full-Stack & CEO",
-    name: "João Vitor",
-    heroTitle: "Opa, eu sou João Dutra",
-    heroBio: "Desenvolvedor full-stack web e mobile com ampla experiência na criação de sistemas, desde a elaboração e prototipação até o desenvolvimento e entrega. Atualmente, atuo como Desenvolvedor Laboratorista no TJMG e lidero a Lite Technology.",
+    name: "João Vitor Dutra de Souza",
+    heroTitle: "Opa, eu sou João Vitor Dutra (odutradev)",
+    heroBio: "Desenvolvedor full-stack web e mobile especializado em criação de sistemas sob medida. Atualmente atuo como Desenvolvedor Laboratorista no UAILab (TJMG) e sou fundador da Lite Technology LTDA.",
     avatarUrl: "https://i.imgur.com/IAx6GTv.png",
     contactTitle: "Entre em contato, vamos trabalhar em seu projeto",
-    contactBio: "Desenvolvo soluções e sistemas de todos os tipos sob medida para resolver a real dor do seu negócio.",
+    contactBio: "Com a Lite Technology LTDA e ampla vivência no UAILab, desenvolvo sistemas sob medida para a real necessidade da sua empresa.",
     whatsappUrl: "https://wa.me/5531997100959"
   },
   navLinks: [

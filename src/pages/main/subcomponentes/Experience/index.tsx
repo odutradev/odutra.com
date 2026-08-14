@@ -23,7 +23,7 @@ const CompanyLogo = ({ item }: CompanyLogoProps) => {
       <div className="w-16 h-16 rounded-xl flex items-center justify-center shrink-0 overflow-hidden">
         <img
           src={item.logoUrl}
-          alt={item.company}
+          alt={`Logo ${item.company} - ${item.role}`}
           onError={handleImageError}
           className="w-full h-full object-cover"
         />

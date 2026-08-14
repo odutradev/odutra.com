@@ -24,7 +24,7 @@ const Contact = () => {
               >
                 <img
                   src={personalInfo.avatarUrl}
-                  alt={personalInfo.name}
+                  alt={`${personalInfo.name} (odutra / odutradev) - Desenvolvedor Full-Stack`}
                   className="w-full h-full object-cover"
                 />
               </motion.div>
