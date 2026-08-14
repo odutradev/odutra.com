@@ -8,7 +8,7 @@ const Footer = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="w-full py-8 bg-surface border-t border-outline-variant"
+      className="w-full py-8 bg-surface-dim"
     >
       <div className="max-w-max-width mx-auto px-gutter flex justify-center items-center text-on-surface-variant text-sm">
         <span className="flex items-center gap-1.5">
