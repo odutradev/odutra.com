@@ -1,11 +1,11 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useCallback, useState } from 'react'
 
-import { calculateDuration } from '../../../../utils/date'
-import portfolioData from '../../../../assets/data'
-import Icon from '../../../../components/Icon'
+import { calculateDuration } from '@utils/date'
+import portfolioData from '@assets/data'
+import Icon from '@components/Icon'
 
-import type { ExperienceItem } from '../../../../assets/types'
+import type { ExperienceItem } from '@assets/types'
 import type { ExperienceProps } from './types'
 
 interface CompanyLogoProps {

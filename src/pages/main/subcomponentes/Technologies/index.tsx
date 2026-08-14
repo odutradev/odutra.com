@@ -1,8 +1,8 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useCallback, useState } from 'react'
 
-import portfolioData from '../../../../assets/data'
-import Icon from '../../../../components/Icon'
+import portfolioData from '@assets/data'
+import Icon from '@components/Icon'
 
 import type { TechnologiesProps } from './types'
 

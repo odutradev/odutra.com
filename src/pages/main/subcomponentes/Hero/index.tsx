@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 
-import { scrollToSection } from '../../../../utils/scroll'
-import portfolioData from '../../../../assets/data'
-import Icon from '../../../../components/Icon'
+import { scrollToSection } from '@utils/scroll'
+import portfolioData from '@assets/data'
+import Icon from '@components/Icon'
 
 import type { HeroProps } from './types'
 

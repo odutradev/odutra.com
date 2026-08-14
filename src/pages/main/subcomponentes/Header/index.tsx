@@ -1,10 +1,10 @@
-import { useCallback, useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import { useCallback, useEffect, useState } from 'react'
 
-import { scrollToSection } from '../../../../utils/scroll'
-import { useTheme } from '../../../../context/ThemeContext'
-import portfolioData from '../../../../assets/data'
-import Icon from '../../../../components/Icon'
+import { useTheme } from '@context/ThemeContext'
+import { scrollToSection } from '@utils/scroll'
+import portfolioData from '@assets/data'
+import Icon from '@components/Icon'
 
 import type { HeaderProps } from './types'
 

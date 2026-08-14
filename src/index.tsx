@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom/client'
 
-import { CustomThemeProvider } from './context/ThemeContext'
-import Router from './routes'
+import { CustomThemeProvider } from '@context/ThemeContext'
+import Router from '@routes'
 
 const App = () => {
   return (
