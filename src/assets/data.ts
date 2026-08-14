@@ -17,7 +17,6 @@ const portfolioData: PortfolioData = {
     { label: "Tecnologias", href: "#tecnologias" },
     { label: "Projetos", href: "#projetos" },
     { label: "Experiência", href: "#experiencia" },
-    { label: "Formação", href: "#formacao" },
     { label: "Contato", href: "#contato" }
   ],
   technologyCategories: [
@@ -218,32 +217,6 @@ const portfolioData: PortfolioData = {
       }
     ]
   },
-  education: [
-    {
-      course: "Engenharia de Software",
-      institution: "Estácio",
-      period: "Nov/2023 - Nov/2027",
-      icon: "school"
-    },
-    {
-      course: "Técnico em Mecatrônica",
-      institution: "SENAI",
-      period: "Mar/2025 - Ago/2026",
-      icon: "precision_manufacturing"
-    },
-    {
-      course: "Robótica & Ind. 4.0",
-      institution: "SENAI",
-      period: "Nov/2023 - Nov/2025",
-      icon: "smart_toy"
-    },
-    {
-      course: "Design & Desenv. Games",
-      institution: "Escola Saga",
-      period: "Fev/2022 - Fev/2023",
-      icon: "sports_esports"
-    }
-  ],
   socialLinks: [
     { name: "Número", icon: "whatsapp", url: "https://wa.me/5531997100959" },
     { name: "Email", icon: "mail", url: "mailto:joao.vitornl@gmail.com" },

@@ -56,13 +56,6 @@ export interface ExperiencesData {
   previous: ExperienceItem[]
 }
 
-export interface EducationItem {
-  course: string
-  institution: string
-  period: string
-  icon: string
-}
-
 export interface SocialLink {
   name: string
   icon: string
@@ -75,6 +68,5 @@ export interface PortfolioData {
   technologyCategories: TechnologyCategory[]
   projects: ProjectItem[]
   experiences: ExperiencesData
-  education: EducationItem[]
   socialLinks: SocialLink[]
 }

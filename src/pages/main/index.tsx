@@ -1,6 +1,5 @@
 import Technologies from './subcomponentes/Technologies'
 import Experience from './subcomponentes/Experience'
-import Education from './subcomponentes/Education'
 import Projects from './subcomponentes/Projects'
 import Contact from './subcomponentes/Contact'
 import Header from './subcomponentes/Header'
@@ -16,7 +15,6 @@ const MainPage = () => {
         <Technologies />
         <Projects />
         <Experience />
-        <Education />
       </main>
       <Contact />
       <Footer />
