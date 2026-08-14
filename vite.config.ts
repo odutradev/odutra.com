@@ -14,6 +14,7 @@ export default defineConfig(({ mode }) => {
         '@assets': path.resolve(__dirname, './src/assets'),
         '@components': path.resolve(__dirname, './src/components'),
         '@stores': path.resolve(__dirname, './src/stores'),
+        '@styles': path.resolve(__dirname, './src/styles'),
         '@pages': path.resolve(__dirname, './src/pages'),
         '@routes': path.resolve(__dirname, './src/routes'),
         '@utils': path.resolve(__dirname, './src/utils'),
