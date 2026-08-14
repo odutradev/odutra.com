@@ -94,6 +94,7 @@ const Experience = () => {
                     transition={{ duration: 0.5, delay: index * 0.15 }}
                     className="relative w-full"
                   >
+                    <div className="absolute left-[14px] top-1/2 -translate-y-1/2 w-1 h-8 bg-slate-900 z-[1] hidden sm:block" />
                     <div className="absolute left-[11px] top-1/2 -translate-y-1/2 hidden sm:flex items-center justify-center z-10">
                       <span className="absolute inline-flex h-3.5 w-3.5 rounded-full bg-primary/60 animate-ping" />
                       <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-primary ring-4 ring-slate-900 shadow-[0_0_10px_rgba(1,145,229,0.6)] animate-pulse" />
@@ -182,6 +183,7 @@ const Experience = () => {
                           transition={{ duration: 0.35, delay: index * 0.1 }}
                           className="relative w-full"
                         >
+                          <div className="absolute left-[14px] top-1/2 -translate-y-1/2 w-1 h-8 bg-slate-900 z-[1] hidden sm:block" />
                           <div className="absolute left-[11px] top-1/2 -translate-y-1/2 hidden sm:flex items-center justify-center z-10">
                             <span className="absolute inline-flex h-3.5 w-3.5 rounded-full bg-primary/60 animate-ping" />
                             <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-primary ring-4 ring-slate-900 shadow-[0_0_10px_rgba(1,145,229,0.6)] animate-pulse" />
