@@ -9,7 +9,7 @@ const portfolioData: PortfolioData = {
     heroBio: "Desenvolvedor full-stack web e mobile especializado em criação de sistemas sob medida. Atualmente atuo como Desenvolvedor Laboratorista no UAILab (TJMG) e sou fundador da Lite Technology LTDA.",
     avatarUrl: "https://i.imgur.com/IAx6GTv.png",
     contactTitle: "Entre em contato, vamos trabalhar em seu projeto",
-    contactBio: "Com a Lite Technology LTDA e ampla vivência no UAILab, desenvolvo sistemas sob medida para a real necessidade da sua empresa.",
+    contactBio: "Desenvolvo sistemas sob medida para a real necessidade da sua empresa.",
     whatsappUrl: "https://wa.me/5531997100959"
   },
   navLinks: [
